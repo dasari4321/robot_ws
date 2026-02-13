@@ -1,9 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000355] (-) JobUnselected: {'identifier': 'nav2_bringup'}
-[0.000447] (-) JobUnselected: {'identifier': 'nav2_minimal_tb4_description'}
-[0.000638] (-) JobUnselected: {'identifier': 'nav2_minimal_tb4_sim'}
-[0.000684] (-) JobUnselected: {'identifier': 'parking_bringup'}
-[0.000722] (-) JobUnselected: {'identifier': 'parking_car'}
-[0.000759] (-) JobUnselected: {'identifier': 'parking_world'}
-[0.000794] (-) JobUnselected: {'identifier': 'sam_bringup'}
-[0.000829] (-) EventReactorShutdown: {}

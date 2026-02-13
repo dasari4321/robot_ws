@@ -1,0 +1,1 @@
+Invoking command in '/home/mohana/Desktop/robot_ws/build/sam_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mohana/Desktop/robot_ws/src/sam_bringup -DCMAKE_INSTALL_PREFIX=/home/mohana/Desktop/robot_ws/install/sam_bringup
