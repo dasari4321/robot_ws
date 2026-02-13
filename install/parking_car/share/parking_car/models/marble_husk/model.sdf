@@ -1018,28 +1018,52 @@
     </joint>
     <!-- Gimbal Joints Plugins -->
     <plugin
-      filename="libignition-gazebo-joint-controller-system.so"
-      name="ignition::gazebo::systems::JointController">
+      filename="gz-sim-joint-controller-system"
+      name="gz::sim::systems::JointController">
       <joint_name>pan_gimbal_joint</joint_name>
       <use_force_commands>true</use_force_commands>
       <p_gain>0.4</p_gain>
       <i_gain>10</i_gain>
+      <topic>/joint/pan_gimbal_joint/cmd_vel</topic>
     </plugin>
     <plugin
-      filename="libignition-gazebo-joint-controller-system.so"
-      name="ignition::gazebo::systems::JointController">
+      filename="gz-sim-joint-controller-system"
+      name="gz::sim::systems::JointController">
       <joint_name>tilt_gimbal_joint</joint_name>
       <use_force_commands>true</use_force_commands>
       <p_gain>0.4</p_gain>
       <i_gain>10</i_gain>
+      <topic>/joint/tilt_gimbal_joint/cmd_vel</topic>
     </plugin>
+
     <plugin
-      filename="libignition-gazebo-joint-state-publisher-system.so"
-      name="ignition::gazebo::systems::JointStatePublisher">
+      filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
       <joint_name>pan_gimbal_joint</joint_name>
       <joint_name>tilt_gimbal_joint</joint_name>
+      <topic>/joint_states</topic>
     </plugin>
-    <static>0</static>
+
+    <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+        <left_joint>left_wheel_joint</left_joint>
+        <right_joint>right_wheel_joint</right_joint>
+        <wheel_separation>1.25</wheel_separation>
+        <wheel_radius>0.3</wheel_radius>
+        <odom_publish_frequency>1</odom_publish_frequency>
+        <max_linear_acceleration>1</max_linear_acceleration>
+        <min_linear_acceleration>-1</min_linear_acceleration>
+        <max_angular_acceleration>2</max_angular_acceleration>
+        <min_angular_acceleration>-2</min_angular_acceleration>
+        <max_linear_velocity>0.5</max_linear_velocity>
+        <min_linear_velocity>-0.5</min_linear_velocity>
+        <max_angular_velocity>1</max_angular_velocity>
+        <min_angular_velocity>-1</min_angular_velocity>
+        <!-- <topic>/cmd_vel</topic>
+        <odom_topic>/odom</odom_topic>
+        <tf_topic>/tf</tf_topic>
+        <frame_id>odom</frame_id>
+        <child_frame_id>base_link</child_frame_id> -->
+      </plugin>
   </model>
 </sdf>
 

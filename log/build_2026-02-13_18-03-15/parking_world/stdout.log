@@ -1,0 +1,202 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)
+-- Found parking_car: 0.0.0 (/home/mohana/Desktop/robot_ws/install/parking_car/share/parking_car/cmake)
+-- Configuring done (1.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mohana/Desktop/robot_ws/build/parking_world
+-- Install configuration: ""
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs/marble_bridge.yaml
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs/car_bridge.yaml
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs/tb4_bridge.yaml
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs/bridge_config.yaml
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch/spawn_marble.launch.py
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch/simulation.launch.py
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch/spawn_tb4.launch.py
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch/display.launch.py
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/track_drive.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/depot.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/warehouse.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/sonoma.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/model.config
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/meshes
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/meshes/parking_garage.dae
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/model.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials/textures
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials/textures/parking_garage_diffuse.jpg
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials/textures/parking_garage_spec.jpg
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/2.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/1.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/4.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/3.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/5.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/parking_garage_diffuse.jpg
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/parking_garage_spec.jpg
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/nav2_warehouse.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/velocity_control.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/visualize_lidar.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/collada_world_exporter.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/pose_publisher.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/lightmap.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/triggered_publisher.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/follow_actor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/mimic_fast_slow_pendulums_world.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/global_illumination.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/empty.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/environmental_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/nested_model_joint_positions.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/log_record_resources.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/track_drive.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/segmentation_camera.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/detachable_joint.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/wide_angle_camera.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/model_photo_shoot.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/camera_video_record_dbl_pendulum.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/dem_volcano.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/joint_trajectory_controller.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/acoustic_comms_propagation.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/shapes_bitmask.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/lift_drag.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/dvl_world.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/trajectory_follower.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/diff_drive_skid.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/sensors_demo.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/optical_tactile_sensor_plugin.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/gpu_lidar_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/acoustic_comms.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/levels_no_performers.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/spacecraft.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/python_system_loader.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/lift_drag_nested.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/actors_population.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/skid_steer_mecanum.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/diff_drive.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/linear_battery_demo.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/dem_moon.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/auv_controls.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/multicopter_velocity_control.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/acoustic_comms_moving_targets.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/joint_position_controller.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/video_record_dbl_pendulum.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/fluid_added_mass.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/tracked_vehicle_simple.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/empty_gui.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/fuel.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/touch_plugin.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/logical_camera_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/joint_controller.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/log_record_dbl_pendulum.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/projector.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/shader_param.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/import_mesh.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/acoustic_comms_packet_collision.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/apply_link_wrench.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/levels.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/sensors.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/actor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/plane_propeller_demo.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/quadcopter.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/polylines.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/resource_spawner.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/buoyancy_engine.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/logical_audio_sensor_plugin.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/multi_lrauv_race.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thermal_camera.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/lrauv_control_demo.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/3k_shapes.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/triggered_camera_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/debug_shapes.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/gpu_lidar_retro_values_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/log_record_keyboard.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/visualize_contacts.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/fuel_textured_mesh.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/performer_detector.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/dem_monterey_bay.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/pendulum_links.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/spaces.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/perfect_comms.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thumbnails
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thumbnails/OpenRobotics.Tugbot in Warehouse.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thumbnails/OpenRobotics.Prius on Sonoma Raceway.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thumbnails/openrobotics.empty.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thumbnails/OpenRobotics.Panda joint control world.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thumbnails/OpenRobotics.NAO joint control.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/thumbnails/OpenRobotics.Quadcopter teleop.png
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/actor_crowd.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/tunnel.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/minimal_scene.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/plot_3d.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/lighter_than_air_blimp.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/conveyor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/buoyancy.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/environmental_data.csv
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/apply_joint_force.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/lift_drag_battery.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/kinetic_energy_monitor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/auto_inertia_rolling_shapes.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/breadcrumbs.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/elevator.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/wind.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/default.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/spherical_coordinates.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/depth_camera_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/ackermann_steering.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/contact_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/rolling_shapes.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/acoustic_comms_demo.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/visibility.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/particle_emitter.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/graded_buoyancy.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/grid.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/shapes.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/boundingbox_camera.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/rf_comms.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/nested_model.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/sky.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/camera_sensor.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/world_joint.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/camera_lens_flare.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/mecanum_drive.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/auto_inertia_pendulum.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/lights.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/advanced_lift_drag_system.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/heightmap.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/log_record_shapes.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/physics_options.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/ground_spacecraft_testbed.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/all_worlds/trisphere_cycle_wheel_slip.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/my_world.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/ament_index/resource_index/package_run_dependencies/parking_world
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/ament_index/resource_index/parent_prefix_path/parking_world
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/ament_prefix_path.sh
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/ament_prefix_path.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/path.sh
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/path.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.bash
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.sh
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.zsh
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/package.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/ament_index/resource_index/packages/parking_world
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/cmake/parking_worldConfig.cmake
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/cmake/parking_worldConfig-version.cmake
+-- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/package.xml

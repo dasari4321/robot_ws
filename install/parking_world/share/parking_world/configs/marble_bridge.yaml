@@ -1,21 +1,28 @@
 # replace clock_bridge
-- ros_topic_name: "clock"
+- ros_topic_name: "/clock"
   gz_topic_name: "/clock"
   ros_type_name: "rosgraph_msgs/msg/Clock"
   gz_type_name: "gz.msgs.Clock"
   direction: GZ_TO_ROS
 
+# replace cmd_vel_bridge
+- ros_topic_name: "/cmd_vel"
+  gz_topic_name: "/model/marble_husky_sensor_config_1/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
 # no equivalent in TB3 - add
-- ros_topic_name: "joint_states"
-  gz_topic_name: "joint_states"
+- ros_topic_name: "/joint_states"
+  gz_topic_name: "/joint_states"
   ros_type_name: "sensor_msgs/msg/JointState"
   gz_type_name: "gz.msgs.Model"
   direction: GZ_TO_ROS
 
 # replace odom_bridge - check gz topic name
 # gz topic published by DiffDrive plugin
-- ros_topic_name: "odom"
-  gz_topic_name: "/odom"
+- ros_topic_name: "/odom"
+  gz_topic_name: "/model/marble_husky_sensor_config_1/odometry"
   ros_type_name: "nav_msgs/msg/Odometry"
   gz_type_name: "gz.msgs.Odometry"
   direction: GZ_TO_ROS
@@ -23,23 +30,104 @@
 # replace odom_tf_bridge - check gz and ros topic names
 # gz topic published by DiffDrive plugin
 # prefix ros2 topic with gz
-- ros_topic_name: "tf"
+- ros_topic_name: "/tf"
   gz_topic_name: "/tf"
   ros_type_name: "tf2_msgs/msg/TFMessage"
   gz_type_name: "gz.msgs.Pose_V"
   direction: GZ_TO_ROS
 
-# replace lidar_bridge
-- ros_topic_name: "scan"
-  gz_topic_name: "/scan"
-  ros_type_name: "sensor_msgs/msg/LaserScan"
-  gz_type_name: "gz.msgs.LaserScan"
+- ros_topic_name: "/tf_static"
+  gz_topic_name: "/tf_static"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
   direction: GZ_TO_ROS
 
+# # replace lidar_bridge
+# - ros_topic_name: "/front_laser/scan"
+#   gz_topic_name: "/world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/front_laser/scan"
+#   ros_type_name: "sensor_msgs/msg/LaserScan"
+#   gz_type_name: "gz.msgs.LaserScan"
+#   direction: GZ_TO_ROS
+
+# # replace lidar_bridge
+# - ros_topic_name: "/planar_laser/scan"
+#   gz_topic_name: "/world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/planar_laser/scan"
+#   ros_type_name: "sensor_msgs/msg/LaserScan"
+#   gz_type_name: "gz.msgs.LaserScan"
+#   direction: GZ_TO_ROS
+
+# # replace lidar_bridge
+# - ros_topic_name: "/front_laser/points"
+#   gz_topic_name: "/world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/front_laser/scan"
+#   ros_type_name: "sensor_msgs/msg/PointCloud2"
+#   gz_type_name: "gz.msgs.PointCloudPacked"
+#   direction: GZ_TO_ROS
+
+# # replace lidar_bridge
+# - ros_topic_name: "/planar_laser/points"
+#   gz_topic_name: "/world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/planar_laser/scan"
+#   ros_type_name: "sensor_msgs/msg/PointCloud2"
+#   gz_type_name: "gz.msgs.PointCloudPacked"
+#   direction: GZ_TO_ROS
+
 # replace cmd_vel_bridge
-- ros_topic_name: "cmd_vel"
-  gz_topic_name: "/cmd_vel"
+- ros_topic_name: "/joint/pan_gimbal_joint/cmd_vel"
+  gz_topic_name: "/model/marble_husky_sensor_config_1/joint/pan_gimbal_joint/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "gz.msgs.Twist"
   direction: ROS_TO_GZ
 
+# replace cmd_vel_bridge
+- ros_topic_name: "/joint/tilt_gimbal_joint/cmd_vel"
+  gz_topic_name: "/model/marble_husky_sensor_config_1/joint/tilt_gimbal_joint/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
+############## ROS #########################
+# /goal_pose
+# /initialpose
+# /parameter_events
+# /robot_description
+# /rosout
+# /tf
+# /tf_static
+############## GZ  ##########################
+# /gazebo/resource_paths
+# /gui/camera/pose
+# /gui/currently_tracked
+# /gui/track
+# /model/marble_husky_sensor_config_1/pose
+# /model/marble_husky_sensor_config_1/tf
+# /sensors/marker
+# /stats
+# /world/default/clock
+# /world/default/dynamic_pose/info
+# /world/default/model/marble_husky_sensor_config_1/joint_state
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_down/camera_info
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_down/depth_image
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_down/image
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_down/points
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_front/camera_info
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_front/depth_image
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_front/image
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/camera_front/points
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/front_laser/scan/points
+# /world/default/model/marble_husky_sensor_config_1/link/base_link/sensor/planar_laser/scan/points
+# /world/default/model/marble_husky_sensor_config_1/link/tilt_gimbal_link/sensor/camera_pan_tilt/camera_info
+# /world/default/model/marble_husky_sensor_config_1/link/tilt_gimbal_link/sensor/camera_pan_tilt/depth_image
+# /world/default/model/marble_husky_sensor_config_1/link/tilt_gimbal_link/sensor/camera_pan_tilt/image
+# /world/default/model/marble_husky_sensor_config_1/link/tilt_gimbal_link/sensor/camera_pan_tilt/points
+# /world/default/pose/info
+# /world/default/scene/deletion
+# /world/default/scene/info
+# /world/default/state
+# /world/default/stats
+# /model/marble_husky_sensor_config_1/cmd_vel
+# /model/marble_husky_sensor_config_1/joint/pan_gimbal_joint/cmd_vel
+# /model/marble_husky_sensor_config_1/joint/tilt_gimbal_joint/cmd_vel
+# /odom
+# /tf
+# /world/default/light_config
+# /world/default/material_color
+###########################
