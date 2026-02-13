@@ -1,0 +1,12 @@
+<launch>
+  <node pkg="joint_state_publisher" exec="joint_state_publisher" name="joint_state_publisher">
+    <remap from="/tf" to="tf" />
+    <remap from="/tf_static" to="tf_static" />
+  </node>
+  <node pkg="robot_state_publisher" exec="robot_state_publisher" name="robot_state_publisher">
+    <param name='robot_description' value="$(command 'xacro $(find-pkg-share parking_car)/models/marble_husk/model.sdf')" />
+    <remap from="/tf" to="tf" />
+    <remap from="/tf_static" to="tf_static" />    
+  </node>
+
+</launch>

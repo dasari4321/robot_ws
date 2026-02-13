@@ -1,0 +1,73 @@
+[0.015s] Invoking command in '/home/mohana/Desktop/robot_ws/build/parking_world': CMAKE_PREFIX_PATH=/home/mohana/Desktop/robot_ws/install/parking_car:/home/mohana/Desktop/robot_ws/install/parking_bringup:/home/mohana/Desktop/robot_ws/install/parking_world:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mohana/Desktop/robot_ws/src/parking_world -DCMAKE_INSTALL_PREFIX=/home/mohana/Desktop/robot_ws/install/parking_world
+[0.108s] -- The C compiler identification is GNU 13.3.0
+[0.197s] -- The CXX compiler identification is GNU 13.3.0
+[0.235s] -- Detecting C compiler ABI info
+[0.374s] -- Detecting C compiler ABI info - done
+[0.387s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.387s] -- Detecting C compile features
+[0.388s] -- Detecting C compile features - done
+[0.410s] -- Detecting CXX compiler ABI info
+[0.579s] -- Detecting CXX compiler ABI info - done
+[0.609s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.611s] -- Detecting CXX compile features
+[0.611s] -- Detecting CXX compile features - done
+[0.624s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.872s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.077s] -- Found xacro: 2.0.11 (/opt/ros/jazzy/share/xacro/cmake)
+[1.078s] -- Found parking_car: 0.0.0 (/home/mohana/Desktop/robot_ws/install/parking_car/share/parking_car/cmake)
+[1.204s] -- Configuring done (1.2s)
+[1.208s] -- Generating done (0.0s)
+[1.210s] -- Build files have been written to: /home/mohana/Desktop/robot_ws/build/parking_world
+[1.219s] Invoked command in '/home/mohana/Desktop/robot_ws/build/parking_world' returned '0': CMAKE_PREFIX_PATH=/home/mohana/Desktop/robot_ws/install/parking_car:/home/mohana/Desktop/robot_ws/install/parking_bringup:/home/mohana/Desktop/robot_ws/install/parking_world:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mohana/Desktop/robot_ws/src/parking_world -DCMAKE_INSTALL_PREFIX=/home/mohana/Desktop/robot_ws/install/parking_world
+[1.220s] Invoking command in '/home/mohana/Desktop/robot_ws/build/parking_world': CMAKE_PREFIX_PATH=/home/mohana/Desktop/robot_ws/install/parking_car:/home/mohana/Desktop/robot_ws/install/parking_bringup:/home/mohana/Desktop/robot_ws/install/parking_world:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mohana/Desktop/robot_ws/build/parking_world -- -j8 -l8
+[1.287s] Invoked command in '/home/mohana/Desktop/robot_ws/build/parking_world' returned '0': CMAKE_PREFIX_PATH=/home/mohana/Desktop/robot_ws/install/parking_car:/home/mohana/Desktop/robot_ws/install/parking_bringup:/home/mohana/Desktop/robot_ws/install/parking_world:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mohana/Desktop/robot_ws/build/parking_world -- -j8 -l8
+[1.289s] Invoking command in '/home/mohana/Desktop/robot_ws/build/parking_world': CMAKE_PREFIX_PATH=/home/mohana/Desktop/robot_ws/install/parking_car:/home/mohana/Desktop/robot_ws/install/parking_bringup:/home/mohana/Desktop/robot_ws/install/parking_world:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mohana/Desktop/robot_ws/build/parking_world
+[1.301s] -- Install configuration: ""
+[1.301s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs
+[1.301s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs/bridge_config.yaml
+[1.302s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs/car_bridge.yaml
+[1.302s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/configs/tb4_bridge.yaml
+[1.302s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch
+[1.302s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch/simulation.launch.py
+[1.303s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch/display.launch.py
+[1.303s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/launch/spawn_tb4.launch.py
+[1.303s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds
+[1.303s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/nav2_warehouse.sdf
+[1.304s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/depot.sdf
+[1.304s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/track_drive.sdf
+[1.304s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage
+[1.305s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/parking_garage_spec.jpg
+[1.306s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/meshes
+[1.306s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/meshes/parking_garage.dae
+[1.307s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials
+[1.308s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials/textures
+[1.308s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials/textures/parking_garage_spec.jpg
+[1.309s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/materials/textures/parking_garage_diffuse.jpg
+[1.310s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/model.sdf
+[1.310s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails
+[1.310s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/3.png
+[1.311s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/2.png
+[1.312s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/4.png
+[1.313s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/1.png
+[1.314s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/thumbnails/5.png
+[1.315s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/parking_garage_diffuse.jpg
+[1.316s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/parking_garage/model.config
+[1.316s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/my_world.sdf
+[1.317s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/warehouse.sdf
+[1.317s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/worlds/sonoma.sdf
+[1.317s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/ament_index/resource_index/package_run_dependencies/parking_world
+[1.318s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/ament_index/resource_index/parent_prefix_path/parking_world
+[1.318s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/ament_prefix_path.sh
+[1.318s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/ament_prefix_path.dsv
+[1.319s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/path.sh
+[1.319s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/environment/path.dsv
+[1.319s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.bash
+[1.320s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.sh
+[1.320s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.zsh
+[1.320s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/local_setup.dsv
+[1.321s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/package.dsv
+[1.321s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/ament_index/resource_index/packages/parking_world
+[1.321s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/cmake/parking_worldConfig.cmake
+[1.322s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/cmake/parking_worldConfig-version.cmake
+[1.322s] -- Installing: /home/mohana/Desktop/robot_ws/install/parking_world/share/parking_world/package.xml
+[1.325s] Invoked command in '/home/mohana/Desktop/robot_ws/build/parking_world' returned '0': CMAKE_PREFIX_PATH=/home/mohana/Desktop/robot_ws/install/parking_car:/home/mohana/Desktop/robot_ws/install/parking_bringup:/home/mohana/Desktop/robot_ws/install/parking_world:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mohana/Desktop/robot_ws/build/parking_world
