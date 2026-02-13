@@ -1,9 +1,0 @@
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/uninstall.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/parking_world_uninstall.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/test.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/edit_cache.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/rebuild_cache.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/list_install_components.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/install.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/install/local.dir
-/home/mohana/Desktop/robot_ws/build/parking_world/CMakeFiles/install/strip.dir

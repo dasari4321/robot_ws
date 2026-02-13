@@ -1,0 +1,57 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)
+-- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (2.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mohana/Desktop/robot_ws/build/sam_bringup
+-- Install configuration: ""
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/src
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/src/description
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/src/description/model.config
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/src/description/sam_bot_description.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/src/description/model.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/src/description/sam_bot_description.urdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/launch
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/launch/display.launch.py
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/world
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/world/track_drive.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/world/sonoma.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/world/my_world.sdf
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/config
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/config/bridge_config.yaml
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/rviz
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/rviz/config_old.rviz
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/ament_index/resource_index/package_run_dependencies/sam_bringup
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/ament_index/resource_index/parent_prefix_path/sam_bringup
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/environment/ament_prefix_path.sh
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/environment/ament_prefix_path.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/environment/path.sh
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/environment/path.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/local_setup.bash
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/local_setup.sh
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/local_setup.zsh
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/local_setup.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/package.dsv
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/ament_index/resource_index/packages/sam_bringup
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/cmake/sam_bringupConfig.cmake
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/cmake/sam_bringupConfig-version.cmake
+-- Installing: /home/mohana/Desktop/robot_ws/install/sam_bringup/share/sam_bringup/package.xml

@@ -1,9 +1,0 @@
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/uninstall.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/parking_bringup_uninstall.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/test.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/edit_cache.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/rebuild_cache.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/list_install_components.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/install.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/install/local.dir
-/home/mohana/Desktop/robot_ws/build/parking_bringup/CMakeFiles/install/strip.dir

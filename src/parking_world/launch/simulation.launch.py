@@ -40,9 +40,9 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     # Get the launch directory
-    sim_dir = get_package_share_directory('nav2_minimal_tb4_sim')
-    desc_dir = get_package_share_directory('nav2_minimal_tb4_description')
-    launch_dir = os.path.join(sim_dir, 'launch')
+#    sim_dir = get_package_share_directory('nav2_minimal_tb4_sim')
+#    desc_dir = get_package_share_directory('nav2_minimal_tb4_description')
+#    launch_dir = os.path.join(sim_dir, 'launch')
 
     # Create the launch configuration variables
     namespace = LaunchConfiguration('namespace')
