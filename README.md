@@ -88,6 +88,7 @@ ros2 launch parking simulation.launch.py
 * **Package not found:** Ensure you ran `source install/setup.bash` *after* a successful build.
 * **Gazebo won't open:** Check that your GPU drivers are up to date, as Gazebo Sim (formerly Ignition) relies heavily on OGRE 2.
 
----
+[Screencast from 2026-02-18 11-38-02.webm](https://github.com/user-attachments/assets/4526ca42-7b08-493a-ab99-6a39f7119cec)
 
-**Would you like me to generate a basic `simulation.launch.py` file to help you get your Xacro robot spawning in Gazebo?**
+
+<img width="1126" height="607" alt="Screenshot from 2026-02-14 16-03-49" src="https://github.com/user-attachments/assets/8e58639d-81b4-4290-8c50-4666d8d58781" />
