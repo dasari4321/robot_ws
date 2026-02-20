@@ -7,28 +7,28 @@
 
 # Cmd velocity bridge (ROS -> Gazebo)
 - ros_topic_name: "/cmd_vel"
-  gz_topic_name: "/model/ackermann_robot/cmd_vel"
+  gz_topic_name: "/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "gz.msgs.Twist"
   direction: "ROS_TO_GZ"
 
 # Odometry bridge (Gazebo -> ROS)
 - ros_topic_name: "/odom"
-  gz_topic_name: "/model/ackermann_robot/odometry"
+  gz_topic_name: "/odometry"
   ros_type_name: "nav_msgs/msg/Odometry"
   gz_type_name: "gz.msgs.Odometry"
   direction: "GZ_TO_ROS"
 
 # Pose bridge (Gazebo -> ROS)
-- ros_topic_name: "/model/ackermann_robot/pose"
-  gz_topic_name: "/model/ackermann_robot/pose"
+- ros_topic_name: "/pose"
+  gz_topic_name: "/pose"
   ros_type_name: "geometry_msgs/msg/PoseStamped"
   gz_type_name: "gz.msgs.Pose"
   direction: "GZ_TO_ROS"
 
 # TF Bridge (Crucial for Odometry to work in RViz)
 - ros_topic_name: "/tf"
-  gz_topic_name: "/model/ackermann_robot/tf"
+  gz_topic_name: "/tf"
   ros_type_name: "tf2_msgs/msg/TFMessage"
   gz_type_name: "gz.msgs.Pose_V"
   direction: "GZ_TO_ROS"

@@ -17,9 +17,10 @@ setup(
 
     ('share/' + package_name + '/meshes',[
         'meshes/chassis_visual.stl',
-        'meshes/wheel_visual.stl',
-        'meshes/chassis_visual.dae',
-        'meshes/wheel_visual.dae'
+        'meshes/front_left_wheel.stl',
+        'meshes/front_right_wheel.stl',
+        'meshes/rear_left_wheel.stl',
+        'meshes/rear_right_wheel.stl'
     ]),
 
     ('share/' + package_name + '/worlds',
