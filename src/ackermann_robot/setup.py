@@ -20,11 +20,15 @@ setup(
         'meshes/front_left_wheel.stl',
         'meshes/front_right_wheel.stl',
         'meshes/rear_left_wheel.stl',
-        'meshes/rear_right_wheel.stl'
+        'meshes/rear_right_wheel.stl',
+        'meshes/parking_garage.stl',
+        'meshes/parking_garage.dae',
+        'meshes/parking_garage_diffuse.jpg',
+        'meshes/parking_garage_spec.jpg'
     ]),
 
     ('share/' + package_name + '/worlds',
-     ['worlds/ackermann_world.sdf']),
+     ['worlds/my_world.sdf']),
 
     ('share/' + package_name + '/config',
      ['config/bridges.yaml']),

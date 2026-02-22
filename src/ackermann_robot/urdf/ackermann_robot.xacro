@@ -4,10 +4,15 @@
   <!-- Real hardware values  -->
   <!-- ===================== -->
 
+  <!-- Dual plate chassis -->
+  <xacro:property name="plate_thickness" value="0.002"/>
+  <xacro:property name="standoff_height" value="0.04"/>
+  <xacro:property name="standoff_radius" value="0.004"/>
+
   <!-- Chassis -->
   <xacro:property name="chassis_length" value="0.27"/>
   <xacro:property name="chassis_width"  value="0.1205"/>
-  <xacro:property name="chassis_height" value="0.00"/>
+  <xacro:property name="chassis_height" value="${2*plate_thickness + standoff_height}"/>
   <xacro:property name="chassis_mass"   value="0.13442"/>
 
   <!-- Wheels -->
@@ -20,10 +25,6 @@
   <xacro:property name="track" value="0.152"/> 
 
 
-  <!-- Dual plate chassis -->
-  <xacro:property name="plate_thickness" value="0.002"/>
-  <xacro:property name="standoff_height" value="0.04"/>
-  <xacro:property name="standoff_radius" value="0.004"/>
 
   <!-- Standoff positions -->
   <xacro:property name="standoff_x" value="${chassis_length/2 - 0.02}"/>
@@ -114,7 +115,7 @@
 
     <!-- Collision: simple box for stable physics -->
     <collision>
-      <origin xyz="0 0 ${chassis_height/2}"/>
+      <origin xyz="0 0 ${wheel_radius + chassis_height/2}"/>
       <geometry>
         <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
       </geometry>
@@ -126,7 +127,7 @@
   <joint name="base_to_chassis" type="fixed">
     <parent link="base_link"/>
     <child link="chassis_link"/>
-    <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
   <!-- ===================== -->
@@ -160,10 +161,10 @@
     </link>
 
     <!-- Gazebo friction for wheels -->
-    <!-- <gazebo reference="${name}_wheel_link">
-      <mu1>0.8</mu1>
-      <mu2>0.8</mu2>
-    </gazebo> -->
+    <gazebo reference="${name}_wheel_link">
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+    </gazebo>
 
     <joint name="${name}_wheel_joint" type="continuous">
       <parent link="chassis_link"/>
@@ -227,10 +228,10 @@
     </link>
 
     <!-- Gazebo friction for wheels -->
-    <!-- <gazebo reference="${name}_wheel_link">
+    <gazebo reference="${name}_wheel_link">
       <mu1>1.0</mu1>
-      <mu2>0.8</mu2>
-    </gazebo> -->
+      <mu2>1.0</mu2>
+    </gazebo>
 
     <joint name="${name}_wheel_joint" type="continuous">
       <parent link="${name}_steer_link"/>
@@ -271,10 +272,10 @@
   <!-- ===================== -->
   
   <!-- Physics properties for chassis -->
-  <!-- <gazebo reference="chassis_link">
+  <gazebo reference="chassis_link">
     <mu1>0.8</mu1>
     <mu2>0.8</mu2>
-  </gazebo> -->
+  </gazebo>
   
   <gazebo>
     <plugin

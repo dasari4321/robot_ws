@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="ackermann_world">
+    
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact"/>
+
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="parking_garage">
+      <static>true</static>
+      <link name="garage">      
+        <collision name="collision_garage">
+          <geometry>
+            <mesh>
+              <uri>model://parking_garage/meshes/parking_garage.stl</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_garage">
+          <pose>0 0 0 0 0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://parking_garage/meshes/parking_garage.dae</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- <model name="ackermann_robot">
+      <pose>0 0 0.036 0 0 0</pose>
+
+      <link name="chassis_link">
+        <inertial>
+          <pose>-0.0029 0 0 0 0 0</pose>
+          <mass>0.13442</mass>
+          <inertia>
+            <ixx>1.509e-04</ixx><ixy>4.7e-08</ixy><ixz>0</ixz>
+            <iyy>8.142e-04</iyy><iyz>0</iyz><izz>9.650e-04</izz>
+          </inertia>
+        </inertial>
+        <visual name="chassis_visual">
+          <pose>0 0 0.02 0 0 0</pose>
+          <geometry><box><size>0.27 0.12 0.04</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+        </visual>
+        <collision name="chassis_collision">
+          <pose>0 0 0.02 0 0 0</pose>
+          <geometry><box><size>0.27 0.12 0.04</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="rear_left_wheel">
+        <pose>-0.1025 0.076 0 1.5708 0 0</pose>
+        <inertial>
+          <mass>0.06775</mass>
+          <inertia><ixx>3.2e-05</ixx><ixy>0</ixy><ixz>0</ixz><iyy>3.2e-05</iyy><iyz>0</iyz><izz>5.6e-05</izz></inertia>
+        </inertial>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry>
+        </collision>
+      </link>
+
+      <joint name="rear_left_joint" type="revolute">
+        <parent>chassis_link</parent>
+        <child>rear_left_wheel</child>
+        <axis>
+          <xyz>0 0 1</xyz> <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        </axis>
+      </joint>
+
+      <link name="rear_right_wheel">
+        <pose>-0.1025 -0.076 0 1.5708 0 0</pose>
+        <inertial>
+          <mass>0.06775</mass>
+          <inertia><ixx>3.2e-05</ixx><ixy>0</ixy><ixz>0</ixz><iyy>3.2e-05</iyy><iyz>0</iyz><izz>5.6e-05</izz></inertia>
+        </inertial>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry>
+        </collision>
+      </link>
+
+      <joint name="rear_right_joint" type="revolute">
+        <parent>chassis_link</parent>
+        <child>rear_right_wheel</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+
+      <link name="front_left_steer">
+        <pose>0.1025 0.076 0 0 0 0</pose>
+        <inertial><mass>0.01</mass><inertia><ixx>1e-6</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1e-6</iyy><iyz>0</iyz><izz>1e-6</izz></inertia></inertial>
+      </link>
+      <joint name="front_left_steer_joint" type="revolute">
+        <parent>chassis_link</parent>
+        <child>front_left_steer</child>
+        <axis><xyz>0 0 1</xyz><limit><lower>-0.6</lower><upper>0.6</upper></limit></axis>
+      </joint>
+
+      <link name="front_left_wheel">
+        <pose>0.1025 0.076 0 1.5708 0 0</pose>
+        <visual name="visual"><geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry></collision>
+      </link>
+      <joint name="front_left_wheel_joint" type="revolute">
+        <parent>front_left_steer</parent>
+        <child>front_left_wheel</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+
+      <link name="front_right_steer">
+        <pose>0.1025 -0.076 0 0 0 0</pose>
+        <inertial><mass>0.01</mass><inertia><ixx>1e-6</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1e-6</iyy><iyz>0</iyz><izz>1e-6</izz></inertia></inertial>
+      </link>
+      <joint name="front_right_steer_joint" type="revolute">
+        <parent>chassis_link</parent>
+        <child>front_right_steer</child>
+        <axis><xyz>0 0 1</xyz><limit><lower>-0.6</lower><upper>0.6</upper></limit></axis>
+      </joint>
+
+      <link name="front_right_wheel">
+        <pose>0.1025 -0.076 0 1.5708 0 0</pose>
+        <visual name="visual"><geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.036</radius><length>0.03</length></cylinder></geometry></collision>
+      </link>
+      <joint name="front_right_wheel_joint" type="revolute">
+        <parent>front_right_steer</parent>
+        <child>front_right_wheel</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+
+      <plugin filename="gz-sim-ackermann-steering-system" name="gz::sim::systems::AckermannSteering">
+        <left_steering_joint>front_left_steer_joint</left_steering_joint>
+        <right_steering_joint>front_right_steer_joint</right_steering_joint>
+        <left_joint>rear_left_joint</left_joint>
+        <right_joint>rear_right_joint</right_joint>
+        <wheel_base>0.205</wheel_base>
+        <wheel_separation>0.152</wheel_separation>
+        <wheel_radius>0.036</wheel_radius>
+      </plugin>
+
+    </model> -->
+  </world>
+</sdf>
+

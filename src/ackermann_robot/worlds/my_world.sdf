@@ -1,26 +1,22 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="ackermann_world">
+    
     <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
     <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
     <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact"/>
 
     <physics type="ode">
-      <max_step_size>0.001</max_step_size>
+      <max_step_size>0.0001</max_step_size>
       <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>10000</real_time_update_rate>
       <ode>
-        <solver>
-          <type>quick</type>
-          <iters>150</iters>
-        </solver>
-      </ode>
+        <constraints>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+     </ode>
     </physics>
-
-    <scene>
-      <ambient>0.4 0.4 0.4 1</ambient>
-      <background>0.7 0.7 0.7 1</background>
-      <shadows>true</shadows>
-    </scene>
 
     <light name="sun" type="directional">
       <cast_shadows>true</cast_shadows>
@@ -33,7 +29,15 @@
       <link name="link">
         <collision name="collision">
           <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
-          <surface><friction><ode><mu>50</mu><mu2>50</mu2></ode></friction></surface>
+          <surface>
+            <friction>
+              <ode><mu>100</mu><mu2>50</mu2></ode>
+            </friction>
+            <contact>
+              <ode>
+                <kp>1e15</kp> <kd>1e13</kd> </ode>
+            </contact>
+          </surface>
         </collision>
         <visual name="visual">
           <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
@@ -41,39 +45,69 @@
         </visual>
       </link>
     </model>
- 
-    <model name="ackermann_robot">
-      <pose>0 0 0.018 0 0 0</pose>
-      <link name="base_link">
-        <pose>7.8263E-05 3.6651E-05 0.0 0 0 0</pose>
-        <inertial>
-          <mass>1.3442E-01</mass>
-          <inertia>
-            <ixx>1.50903123e+00</ixx><ixy>4.70052075e-04</ixy><ixz>6.59784866e-11</ixz>
-            <iyy>8.14177826e+00</iyy><iyz>1.01460270e-11</iyz><izz>9.64991335e+00</izz>
-          </inertia>
-        </inertial>
-        <visual name="visual">
-      	  <geometry>
+
+<model name="parking_garage">
+      <static>true</static>
+      <link name="garage">      
+        <pose>0 0 0 0 0 1.5708</pose>
+
+        <collision name="collision_garage">
+          <geometry>
             <mesh>
-              <uri>file:///home/mohana/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes/chassis_visual.stl</uri>
-              <scale>0.001 0.001 0.001</scale>
+              <uri>package://ackermann_robot/meshes/parking_garage.dae</uri>
+              <scale>0.1 0.1 0.1</scale>
             </mesh>
           </geometry>
-          <material>
-            <ambient>1.0 0.0 0.0 1.0</ambient>
-            <diffuse>1.0 0.0 0.0 1.0</diffuse>
-            <specular>0.5 0.5 0.5 1.0</specular>
-          </material>
-        </visual>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>0.2 0.15 0.018</size>
-            </box>
-          </geometry>
+          <surface>
+            <!-- <contact>
+              <collide_bitmask>0xffff</collide_bitmask>
+            </contact> -->
+            <contact>
+              <ode>
+                <kp>1e15</kp> <kd>1e13</kd> </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+          </surface>
         </collision>
+
+        <visual name="visual_garage">
+          <geometry>
+            <mesh>
+              <uri>package://ackermann_robot/meshes/parking_garage.dae</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </visual>
       </link>
     </model>
+    <!-- <model name="parking_garage">
+      <static>true</static>
+      <link name="garage">      
+        <collision name="collision_garage">
+          <pose>0 0 0 0 0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>package://ackermann_robot/meshes/parking_garage.stl</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_garage">
+          <pose>0 0 0 0 0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>package://ackermann_robot/meshes/parking_garage.dae</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model> -->
+
   </world>
 </sdf>

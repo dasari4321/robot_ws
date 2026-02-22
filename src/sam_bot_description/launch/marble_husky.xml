@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="robot_state_publisher" exec="robot_state_publisher">
+    <param name='robot_description' value="$(command 'xacro $(find-pkg-share sam_bot_description)/src/description/marble_husk/model.sdf')"/>
+  </node>
+</launch>

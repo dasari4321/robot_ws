@@ -18,7 +18,7 @@ def generate_launch_description():
     ackermann_robot_dir = get_package_share_directory('ackermann_robot')
     
     # SDF world file (Gazebo Jetty uses SDF format)
-    world_file = os.path.join(ackermann_robot_dir, 'worlds', 'ackermann_world.sdf')
+    world_file = os.path.join(ackermann_robot_dir, 'worlds', 'my_world.sdf')
     
     # XACRO file
     xacro_file = os.path.join(ackermann_robot_dir, 'urdf', 'ackermann_robot.xacro')
@@ -59,7 +59,7 @@ def generate_launch_description():
             arguments=[
                 '-name', 'ackermann_robot',
                 '-topic', 'robot_description',
-                '-pose', '0 0 0 0 0 0',
+                '-x', '-3.0', 'z', '0.036',
                 '-use_sim_time', 'true'
             ],
             output='screen',
