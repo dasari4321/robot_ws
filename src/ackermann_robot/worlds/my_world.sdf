@@ -1,11 +1,19 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <world name="ackermann_world">
+  <world name="multi_level_parking">
     
     <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
     <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
     <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
     <plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact"/>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
+    <plugin filename="gz-sim-air-pressure-system" name="gz::sim::systems::AirPressure"/>
+    
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
 
     <physics type="ode">
       <max_step_size>0.0001</max_step_size>
@@ -46,9 +54,9 @@
       </link>
     </model>
 
-<model name="parking_garage">
+    <model name="parking_garage">
       <static>true</static>
-      <link name="garage">      
+      <link name="garage">
         <pose>0 0 0 0 0 1.5708</pose>
 
         <collision name="collision_garage">
@@ -59,9 +67,6 @@
             </mesh>
           </geometry>
           <surface>
-            <!-- <contact>
-              <collide_bitmask>0xffff</collide_bitmask>
-            </contact> -->
             <contact>
               <ode>
                 <kp>1e15</kp> <kd>1e13</kd> </ode>
@@ -85,29 +90,5 @@
         </visual>
       </link>
     </model>
-    <!-- <model name="parking_garage">
-      <static>true</static>
-      <link name="garage">      
-        <collision name="collision_garage">
-          <pose>0 0 0 0 0 1.5708</pose>
-          <geometry>
-            <mesh>
-              <uri>package://ackermann_robot/meshes/parking_garage.stl</uri>
-              <scale>0.1 0.1 0.1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="visual_garage">
-          <pose>0 0 0 0 0 1.5708</pose>
-          <geometry>
-            <mesh>
-              <uri>package://ackermann_robot/meshes/parking_garage.dae</uri>
-              <scale>0.1 0.1 0.1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model> -->
-
   </world>
 </sdf>

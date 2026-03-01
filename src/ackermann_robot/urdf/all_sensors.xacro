@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find ackermann_robot)/urdf/sensors_cameras.xacro" />
+  <xacro:include filename="$(find ackermann_robot)/urdf/sensors_imu.xacro" />
+
+  <xacro:sensor_imu name="imu" parent="base_link">
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+  </xacro:sensor_imu>
+
+  <xacro:wide_angle_camera 
+    name="front"
+    x="0.135" y="0.0" z="0.08" 
+    roll="0.0" pitch="0.0" yaw="0.0"
+    width="1280" height="720" fov="2.0944"
+    fx="369.5" fy="369.5" cx="640" cy="360"
+    k1="0.0" k2="0.0" k3="0.0" p1="0.0" p2="0.0"/>
+
+  <xacro:wide_angle_camera 
+    name="left"
+    x="0.0" y="0.06025" z="0.08" 
+    roll="0.0" pitch="0.0" yaw="1.5708"
+    width="1280" height="720" fov="2.0944"
+    fx="369.5" fy="369.5" cx="640" cy="360"
+    k1="0.0" k2="0.0" k3="0.0" p1="0.0" p2="0.0"/>
+
+  <xacro:wide_angle_camera 
+    name="right"
+    x="0.0" y="-0.06025" z="0.08" 
+    roll="0.0" pitch="0.0" yaw="-1.5708"
+    width="1280" height="720" fov="2.0944"
+    fx="369.5" fy="369.5" cx="640" cy="360"
+    k1="0.0" k2="0.0" k3="0.0" p1="0.0" p2="0.0"/>
+
+  <xacro:wide_angle_camera 
+    name="rear"
+    x="-0.135" y="0.0" z="0.08" 
+    roll="0.0" pitch="0.0" yaw="3.14159"
+    width="1280" height="720" fov="2.0944"
+    fx="369.5" fy="369.5" cx="640" cy="360"
+    k1="0.0" k2="0.0" k3="0.0" p1="0.0" p2="0.0" />
+
+</robot>

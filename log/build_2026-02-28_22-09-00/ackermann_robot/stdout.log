@@ -1,0 +1,53 @@
+running develop
+running egg_info
+creating ackermann_robot.egg-info
+writing ackermann_robot.egg-info/PKG-INFO
+writing dependency_links to ackermann_robot.egg-info/dependency_links.txt
+writing requirements to ackermann_robot.egg-info/requires.txt
+writing top-level names to ackermann_robot.egg-info/top_level.txt
+writing manifest file 'ackermann_robot.egg-info/SOURCES.txt'
+reading manifest file 'ackermann_robot.egg-info/SOURCES.txt'
+writing manifest file 'ackermann_robot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/lib/python3.12/site-packages/ackermann-robot.egg-link (link to .)
+
+Installed /home/mohana/Desktop/robot_ws/build/ackermann_robot
+running symlink_data
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index/packages
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/resource/ackermann_robot -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index/packages
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/package.xml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/ackermann_robot.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/all_sensors.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_cameras.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_imu.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_gpu_lidar.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_lidar.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_gps.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_barometer.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/chassis_visual.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/front_left_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/front_right_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/rear_left_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/rear_right_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage.dae -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage_diffuse.jpg -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage_spec.jpg -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/worlds
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/worlds/multi_level_parking.sdf -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/worlds
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/bridges.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/ekf.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/nav2_params.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/maps/my_map.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/maps/my_map.pgm -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/rviz/default.rviz -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/rviz/nav2_config.rviz -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz
+creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/launch
+symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/launch/ackermann_gazebo.launch.py -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/launch

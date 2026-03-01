@@ -1,24 +1,30 @@
 #!/usr/bin/env python3
 
 import os
+import sys
 import xacro
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess
-from launch.actions import IncludeLaunchDescription
+from launch.actions import ExecuteProcess, IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from ros_gz_bridge.actions import RosGzBridge
 
 def generate_launch_description():
-    """Launch Gazebo Jetty with the Ackermann robot for ROS 2 Jazzy."""
+    """Launch Gazebo Harmonic with the Ackermann robot for ROS 2 Jazzy."""
     
     # Get package directory
     ackermann_robot_dir = get_package_share_directory('ackermann_robot')
     
-    # SDF world file (Gazebo Jetty uses SDF format)
-    world_file = os.path.join(ackermann_robot_dir, 'worlds', 'my_world.sdf')
+    # Config files
+    ekf_config_path = os.path.join(ackermann_robot_dir, 'config', 'ekf.yaml')
+    rviz_config_path = os.path.join(ackermann_robot_dir, 'rviz', 'default.rviz')
+
+    # SDF world file (Gazebo Harmonic uses SDF format)
+    world_file = os.path.join(ackermann_robot_dir, 'worlds', 'multi_level_parking.sdf')
     
     # XACRO file
     xacro_file = os.path.join(ackermann_robot_dir, 'urdf', 'ackermann_robot.xacro')
@@ -34,6 +40,12 @@ def generate_launch_description():
     }
 
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'rviz',
+            default_value='true',
+            description='Launch RViz if true'
+        ),
+
         # Publish robot description
         Node(
             package='robot_state_publisher',
@@ -59,7 +71,7 @@ def generate_launch_description():
             arguments=[
                 '-name', 'ackermann_robot',
                 '-topic', 'robot_description',
-                '-x', '-3.0', 'z', '0.036',
+                '-x', '1.2', '-y', '0.0', '-z', '0.025', '-euler', '0.0 0.0 0.0',
                 '-use_sim_time', 'true'
             ],
             output='screen',
@@ -72,5 +84,42 @@ def generate_launch_description():
         name='ros_gz_bridge',
         output='screen',
         parameters=[bridge_params]
+        ),
+
+        # Robot Localization (EKF)
+        Node(
+            package='robot_localization',
+            executable='ekf_node',
+            name='ekf_filter_node',
+            output='screen',
+            parameters=[ekf_config_path, {'use_sim_time': True}]
+        ),
+
+        # Barometer Converter
+        # Node(
+        #     package='ackermann_robot',
+        #     executable='baro_converter',
+        #     name='baro_converter',
+        #     output='screen',
+        #     parameters=[{'use_sim_time': True}]
+        # ),
+
+        # Visual Odometry (ORB-based)
+        Node(
+            package='ackermann_robot',
+            executable='visual_odom',
+            name='visual_odom',
+            output='screen',
+            parameters=[{'use_sim_time': True}]
+        ),
+
+        # RViz
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d', rviz_config_path],
+            output='screen',
+            condition=IfCondition(LaunchConfiguration('rviz'))
         )
     ])

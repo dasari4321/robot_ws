@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot name="ackermann_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find ackermann_robot)/urdf/all_sensors.xacro" />
   <!-- ===================== -->
   <!-- Real hardware values  -->
   <!-- ===================== -->
@@ -12,7 +13,7 @@
   <!-- Chassis -->
   <xacro:property name="chassis_length" value="0.27"/>
   <xacro:property name="chassis_width"  value="0.1205"/>
-  <xacro:property name="chassis_height" value="${2*plate_thickness + standoff_height}"/>
+  <xacro:property name="chassis_height" value="${3*plate_thickness + 2*standoff_height}"/>
   <xacro:property name="chassis_mass"   value="0.13442"/>
 
   <!-- Wheels -->
@@ -62,20 +63,28 @@
     <visual>
       <origin xyz="0 0 ${wheel_radius + plate_thickness/2}" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/mohana/robot_ws/src/ackermann_robot/meshes/chassis_visual.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://ackermann_robot/meshes/chassis_visual.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="chassis_red"/>
+    </visual>
+
+    <!-- Middle plate -->
+    <visual>
+      <origin xyz="0 0 ${wheel_radius + plate_thickness/2 + plate_thickness + standoff_height}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ackermann_robot/meshes/chassis_visual.stl" scale="0.001 0.001 0.001"></mesh>
       </geometry>
       <material name="chassis_red"/>
     </visual>
 
     <!-- Top plate -->
     <visual>
-      <origin xyz="0 0 ${wheel_radius + plate_thickness/2 + plate_thickness + standoff_height}" rpy="0 0 0"/>
+      <origin xyz="0 0 ${wheel_radius + plate_thickness/2 + 2*plate_thickness + 2*standoff_height}" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/mohana/robot_ws/src/ackermann_robot/meshes/chassis_visual.stl" scale="0.001 0.001 0.001"></mesh>
+        <mesh filename="package://ackermann_robot/meshes/chassis_visual.stl" scale="0.001 0.001 0.001"></mesh>
       </geometry>
       <material name="chassis_red"/>
     </visual>
-
 
     <!-- Front left standoff -->
     <visual>
@@ -107,6 +116,42 @@
     <!-- Rear right -->
     <visual>
       <origin xyz="-${standoff_x} -${standoff_y} ${wheel_radius + plate_thickness + standoff_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${standoff_radius}" length="${standoff_height}"/>
+      </geometry>
+      <material name="wheel_black"/>
+    </visual>
+
+    <!-- Upper Front left standoff -->
+    <visual>
+      <origin xyz="${standoff_x} ${standoff_y} ${wheel_radius + 2*plate_thickness + standoff_height + standoff_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${standoff_radius}" length="${standoff_height}"/>
+      </geometry>
+      <material name="wheel_black"/>
+    </visual>
+
+    <!-- Upper Front right -->
+    <visual>
+      <origin xyz="${standoff_x} -${standoff_y} ${wheel_radius + 2*plate_thickness + standoff_height + standoff_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${standoff_radius}" length="${standoff_height}"/>
+      </geometry>
+      <material name="wheel_black"/>
+    </visual>
+
+    <!-- Upper Rear left -->
+    <visual>
+      <origin xyz="-${standoff_x} ${standoff_y} ${wheel_radius + 2*plate_thickness + standoff_height + standoff_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${standoff_radius}" length="${standoff_height}"/>
+      </geometry>
+      <material name="wheel_black"/>
+    </visual>
+
+    <!-- Upper Rear right -->
+    <visual>
+      <origin xyz="-${standoff_x} -${standoff_y} ${wheel_radius + 2*plate_thickness + standoff_height + standoff_height/2}" rpy="0 0 0"/>
       <geometry>
         <cylinder radius="${standoff_radius}" length="${standoff_height}"/>
       </geometry>
@@ -146,7 +191,7 @@
       <visual>
         <origin rpy=" 0 0 3.1412"/>
         <geometry>
-          <mesh filename="/home/mohana/robot_ws/src/ackermann_robot/meshes/${name}_wheel.stl"
+          <mesh filename="package://ackermann_robot/meshes/${name}_wheel.stl"
           scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="wheel_black"/>
@@ -213,7 +258,7 @@
         <origin rpy="0 0 3.1412"/>
         <geometry>
           <!-- <cylinder radius="${wheel_radius}" length="${wheel_width}"/> -->
-        <mesh filename="/home/mohana/robot_ws/src/ackermann_robot/meshes/${name}_wheel.stl"
+        <mesh filename="package://ackermann_robot/meshes/${name}_wheel.stl"
         scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="wheel_black"/>
@@ -276,35 +321,35 @@
     <mu1>0.8</mu1>
     <mu2>0.8</mu2>
   </gazebo>
-  
   <gazebo>
-    <plugin
-      filename="gz-sim-ackermann-steering-system"
-      name="gz::sim::systems::AckermannSteering">
-      
+    <plugin filename="gz-sim-ackermann-steering-system" name="gz::sim::systems::AckermannSteering">
       <left_steering_joint>front_left_steer_joint</left_steering_joint>
       <right_steering_joint>front_right_steer_joint</right_steering_joint>
-      
-      <left_joint>front_left_wheel_joint</left_joint>
       <left_joint>rear_left_wheel_joint</left_joint>
-      <right_joint>front_right_wheel_joint</right_joint>
       <right_joint>rear_right_wheel_joint</right_joint>
-
-      <wheel_base>${wheelbase}</wheel_base>
-      <wheel_separation>${track}</wheel_separation>
-      <kingpin_width>${track}</kingpin_width>
-      <wheel_radius>${wheel_radius}</wheel_radius>
-
-      <steering_limit>0.5</steering_limit> 
+      <wheel_base>0.205</wheel_base>
+      <wheel_separation>0.152</wheel_separation>
+      <kingpin_width>0.152</kingpin_width>
+      <wheel_radius>0.036</wheel_radius>
+      <steering_limit>0.5</steering_limit>
       <topic>/cmd_vel</topic>
-      <odom_topic>/odometry</odom_topic>
-      <tf_topic>/tf</tf_topic>
+      <odom_topic>/odom</odom_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_link</child_frame_id>
       <odom_publish_frequency>30</odom_publish_frequency>
     </plugin>
-  </gazebo>
-  <gazebo>
-    <plugin
-      filename="gz-sim-joint-state-publisher-system"
-      name="gz::sim::systems::JointStatePublisher"/>
+    <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_link_pose>true</publish_link_pose>
+      <publish_sensor_pose>true</publish_sensor_pose>
+      <publish_model_pose>true</publish_model_pose>
+      <use_pose_vector_msg>true</use_pose_vector_msg>
+    </plugin>
+    <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+      <odom_frame>ground_truth_odom</odom_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <odom_topic>/ground_truth_odom</odom_topic>
+      <dimensions>3</dimensions>
+    </plugin>
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher"/>
   </gazebo>
 </robot>

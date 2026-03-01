@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- =================================================================== -->
+  <!-- |               WIDE ANGLE CAMERA MACRO DEFINITION                | -->
+  <!-- =================================================================== -->
+  <!-- Defines a camera link, joint, and Gazebo sensor plugin with distortion -->
+  <xacro:macro name="wide_angle_camera" params="name x y z roll pitch yaw width height fov fx fy cx cy k1 k2 k3 p1 p2">
+    
+    <!-- Camera Link: Physical representation of the camera -->
+    <link name="${name}_camera_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.02 0.02 0.02"/>
+        </geometry>
+        <material name="wheel_black"/>
+      </visual>
+    </link>
+
+    <!-- Camera Joint: Attaches camera to the base_link -->
+    <joint name="${name}_camera_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="${name}_camera_link"/>
+      <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+    </joint>
+
+    <!-- Gazebo Sensor Plugin: Simulates a wide-angle camera -->
+    <gazebo reference="${name}_camera_link">
+      <sensor name="${name}_camera" type="wideanglecamera">
+        <camera>
+          <horizontal_fov>${fov}</horizontal_fov>
+          <image>
+            <width>${width}</width>
+            <height>${height}</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+          <!-- Distortion parameters -->
+          <distortion>
+            <k1>${k1}</k1>
+            <k2>${k2}</k2>
+            <k3>${k3}</k3>
+            <p1>${p1}</p1>
+            <p2>${p2}</p2>
+          </distortion>
+          <!-- Lens configuration for wide angle/fisheye simulation -->
+          <lens>
+            <!-- type element is mandatory -->
+            <type>custom</type>
+            <!-- manually defined mapping function r = c1*f*fun(theta/c2 + c3) -->
+            <!-- More information here: https://en.wikipedia.org/wiki/Fisheye_lens#Mapping_function -->
+            <custom_function>
+              <c1>1.05</c1>
+              <!-- linear scaling -->
+              <c2>4</c2>
+              <!-- angle scaling -->
+              <f>1.0</f>
+              <!-- one more scaling parameter -->
+              <fun>tan</fun>
+              <!-- one of sin,tan,id -->
+            </custom_function>
+            <!-- if it is set to `true` your horizontal FOV will ramain as defined -->
+            <!-- othervise it depends on lens type and custom function, if there is one -->
+            <scale_to_hfov>true</scale_to_hfov>
+            <!-- resolution of the cubemap texture, the highter it is - the sharper is your image -->
+            <env_texture_size>512</env_texture_size>
+            <!-- Intrinsic matrix parameters -->
+            <intrinsics>
+              <fx>${fx}</fx>
+              <fy>${fy}</fy>
+              <cx>${cx}</cx>
+              <cy>${cy}</cy>
+            </intrinsics>
+            <projection>
+              <p_fx>${fx}</p_fx>
+              <p_fy>${fy}</p_fy>
+              <p_cx>${cx}</p_cx>
+              <p_cy>${cy}</p_cy>
+              <tx>0</tx>
+              <ty>0</ty>
+            </projection>
+          </lens>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>${name}_camera/image</topic>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+</robot>

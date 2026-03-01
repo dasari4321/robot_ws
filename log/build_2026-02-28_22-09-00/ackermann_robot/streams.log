@@ -1,0 +1,55 @@
+[1.759s] Invoking command in '/home/mohana/Desktop/robot_ws/build/ackermann_robot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohana/Desktop/robot_ws/build/ackermann_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohana/Desktop/robot_ws/install/ackermann_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mohana/Desktop/robot_ws/build/ackermann_robot/build --no-deps symlink_data
+[2.427s] running develop
+[2.908s] running egg_info
+[2.908s] creating ackermann_robot.egg-info
+[2.955s] writing ackermann_robot.egg-info/PKG-INFO
+[2.955s] writing dependency_links to ackermann_robot.egg-info/dependency_links.txt
+[2.956s] writing requirements to ackermann_robot.egg-info/requires.txt
+[2.956s] writing top-level names to ackermann_robot.egg-info/top_level.txt
+[2.956s] writing manifest file 'ackermann_robot.egg-info/SOURCES.txt'
+[3.061s] reading manifest file 'ackermann_robot.egg-info/SOURCES.txt'
+[3.062s] writing manifest file 'ackermann_robot.egg-info/SOURCES.txt'
+[3.111s] running build_ext
+[3.111s] Creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/lib/python3.12/site-packages/ackermann-robot.egg-link (link to .)
+[3.112s] 
+[3.112s] Installed /home/mohana/Desktop/robot_ws/build/ackermann_robot
+[3.112s] running symlink_data
+[3.113s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index
+[3.113s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index
+[3.113s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index/packages
+[3.114s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/resource/ackermann_robot -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index/packages
+[3.114s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/package.xml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot
+[3.114s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.114s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/ackermann_robot.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.115s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/all_sensors.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.115s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_cameras.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.115s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_imu.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.116s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_gpu_lidar.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.116s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_lidar.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.116s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_gps.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.117s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_barometer.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf
+[3.117s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.117s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/chassis_visual.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.117s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/front_left_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.118s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/front_right_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.118s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/rear_left_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.118s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/rear_right_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.118s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.119s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage.dae -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.119s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage_diffuse.jpg -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.119s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage_spec.jpg -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes
+[3.119s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/worlds
+[3.120s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/worlds/multi_level_parking.sdf -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/worlds
+[3.120s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+[3.120s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/bridges.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+[3.120s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/ekf.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+[3.120s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/nav2_params.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config
+[3.121s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps
+[3.121s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/maps/my_map.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps
+[3.121s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/maps/my_map.pgm -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps
+[3.121s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz
+[3.122s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/rviz/default.rviz -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz
+[3.122s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/rviz/nav2_config.rviz -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz
+[3.122s] creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/launch
+[3.122s] symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/launch/ackermann_gazebo.launch.py -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/launch
+[3.190s] Invoked command in '/home/mohana/Desktop/robot_ws/build/ackermann_robot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohana/Desktop/robot_ws/build/ackermann_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohana/Desktop/robot_ws/install/ackermann_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mohana/Desktop/robot_ws/build/ackermann_robot/build --no-deps symlink_data

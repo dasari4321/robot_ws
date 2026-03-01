@@ -5,7 +5,7 @@ package_name = 'ackermann_robot'
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=[package_name],
     data_files=[
     ('share/ament_index/resource_index/packages',
      ['resource/' + package_name]),
@@ -13,7 +13,11 @@ setup(
     ('share/' + package_name, ['package.xml']),
 
     ('share/' + package_name + '/urdf',
-     ['urdf/ackermann_robot.xacro']),
+     ['urdf/ackermann_robot.xacro',
+      'urdf/all_sensors.xacro',
+      'urdf/sensors_cameras.xacro',
+      'urdf/sensors_imu.xacro',
+      ]),
 
     ('share/' + package_name + '/meshes',[
         'meshes/chassis_visual.stl',
@@ -28,14 +32,24 @@ setup(
     ]),
 
     ('share/' + package_name + '/worlds',
-     ['worlds/my_world.sdf']),
+     ['worlds/multi_level_parking.sdf']),
 
     ('share/' + package_name + '/config',
-     ['config/bridges.yaml']),
+     ['config/bridges.yaml',
+     'config/ekf.yaml',
+     'config/nav2_params.yaml']),
+
+    ('share/' + package_name + '/maps',
+     ['maps/my_map.yaml', 'maps/my_map.pgm']),
+
+    ('share/' + package_name + '/rviz',
+     ['rviz/default.rviz',
+      'rviz/nav2_config.rviz']),
 
     ('share/' + package_name + '/launch',
      ['launch/ackermann_gazebo.launch.py']),
     ],
+
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='mohana',
@@ -49,6 +63,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
+#            'baro_converter = ackermann_robot.baro_converter:main',
+            'visual_odom = ackermann_robot.visual_odom:main',
+#            'camera_transform_extractor = ackermann_robot.calibr:main',
         ],
     },
 )

@@ -1,0 +1,132 @@
+[0.000000] (-) TimerEvent: {}
+[0.000328] (-) JobUnselected: {'identifier': 'dual_arm_panda_moveit_config'}
+[0.000432] (-) JobUnselected: {'identifier': 'hello_moveit'}
+[0.000573] (-) JobUnselected: {'identifier': 'kinova_gen3_6dof_robotiq_2f_85_moveit_config'}
+[0.000615] (-) JobUnselected: {'identifier': 'kinova_gen3_7dof_robotiq_2f_85_moveit_config'}
+[0.000652] (-) JobUnselected: {'identifier': 'kinova_gen3_lite_moveit_config'}
+[0.000714] (-) JobUnselected: {'identifier': 'kortex_api'}
+[0.000751] (-) JobUnselected: {'identifier': 'kortex_bringup'}
+[0.000786] (-) JobUnselected: {'identifier': 'kortex_description'}
+[0.000820] (-) JobUnselected: {'identifier': 'kortex_driver'}
+[0.000854] (-) JobUnselected: {'identifier': 'moveit2_tutorials'}
+[0.000901] (-) JobUnselected: {'identifier': 'moveit_msgs'}
+[0.000998] (-) JobUnselected: {'identifier': 'moveit_resources'}
+[0.001036] (-) JobUnselected: {'identifier': 'moveit_resources_fanuc_description'}
+[0.001069] (-) JobUnselected: {'identifier': 'moveit_resources_fanuc_moveit_config'}
+[0.001103] (-) JobUnselected: {'identifier': 'moveit_resources_panda_description'}
+[0.001136] (-) JobUnselected: {'identifier': 'moveit_resources_panda_moveit_config'}
+[0.001169] (-) JobUnselected: {'identifier': 'moveit_resources_pr2_description'}
+[0.001202] (-) JobUnselected: {'identifier': 'moveit_task_constructor_capabilities'}
+[0.001235] (-) JobUnselected: {'identifier': 'moveit_task_constructor_core'}
+[0.001286] (-) JobUnselected: {'identifier': 'moveit_task_constructor_demo'}
+[0.001348] (-) JobUnselected: {'identifier': 'moveit_task_constructor_msgs'}
+[0.001386] (-) JobUnselected: {'identifier': 'moveit_task_constructor_visualization'}
+[0.001420] (-) JobUnselected: {'identifier': 'moveit_visual_tools'}
+[0.001453] (-) JobUnselected: {'identifier': 'mtc_tutorial'}
+[0.001487] (-) JobUnselected: {'identifier': 'parking_bringup'}
+[0.001520] (-) JobUnselected: {'identifier': 'parking_car'}
+[0.001554] (-) JobUnselected: {'identifier': 'parking_world'}
+[0.001588] (-) JobUnselected: {'identifier': 'picknik_reset_fault_controller'}
+[0.001621] (-) JobUnselected: {'identifier': 'picknik_twist_controller'}
+[0.001654] (-) JobUnselected: {'identifier': 'robotiq_controllers'}
+[0.001687] (-) JobUnselected: {'identifier': 'robotiq_description'}
+[0.001720] (-) JobUnselected: {'identifier': 'robotiq_driver'}
+[0.001753] (-) JobUnselected: {'identifier': 'robotiq_hardware_tests'}
+[0.001786] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.001819] (-) JobUnselected: {'identifier': 'rviz_marker_tools'}
+[0.001851] (-) JobUnselected: {'identifier': 'rviz_visual_tools'}
+[0.001884] (-) JobUnselected: {'identifier': 'sam_bot_description'}
+[0.001972] (-) JobUnselected: {'identifier': 'sam_bringup'}
+[0.002031] (-) JobUnselected: {'identifier': 'serial'}
+[0.002149] (-) JobUnselected: {'identifier': 'surround_vision'}
+[0.002193] (ackermann_robot) JobQueued: {'identifier': 'ackermann_robot', 'dependencies': OrderedDict()}
+[0.002240] (ackermann_robot) JobStarted: {'identifier': 'ackermann_robot'}
+[0.098791] (-) TimerEvent: {}
+[0.199235] (-) TimerEvent: {}
+[0.299987] (-) TimerEvent: {}
+[0.400412] (-) TimerEvent: {}
+[0.500809] (-) TimerEvent: {}
+[0.601240] (-) TimerEvent: {}
+[0.701594] (-) TimerEvent: {}
+[0.801973] (-) TimerEvent: {}
+[0.902361] (-) TimerEvent: {}
+[1.002719] (-) TimerEvent: {}
+[1.102968] (-) TimerEvent: {}
+[1.203342] (-) TimerEvent: {}
+[1.303698] (-) TimerEvent: {}
+[1.404075] (-) TimerEvent: {}
+[1.504447] (-) TimerEvent: {}
+[1.604820] (-) TimerEvent: {}
+[1.705268] (-) TimerEvent: {}
+[1.758738] (ackermann_robot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/mohana/Desktop/robot_ws/build/ackermann_robot/build', '--no-deps', 'symlink_data'], 'cwd': '/home/mohana/Desktop/robot_ws/build/ackermann_robot', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/18833-11-mohana-HP_TIME56065193', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/mohana/robot_ws/install/ackermann_robot/share', 'LANGUAGE': 'en_IN:en', 'USER': 'mohana', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/share/gz:/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mohana', 'OLDPWD': '/home/mohana/Desktop/robot_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '18388', 'SYSTEMD_EXEC_PID': '18833', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '85722', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/mohana/robot_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mohana', 'IGN_GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', 'JOURNAL_STREAM': '8:122318', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mohana', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/mohana-HP:@/tmp/.ICE-unix/18789,unix/mohana-HP:/tmp/.ICE-unix/18789', 'INVOCATION_ID': 'd46627cdf1bc4bf78fce3dee9b9d7ce8', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mohana/robot_ws/install/ackermann_robot:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:ca3b5ee4-5e28-4c22-8c5e-47da39ce390d', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mohana/Desktop/robot_ws/build/ackermann_robot', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mohana/Desktop/robot_ws/build/ackermann_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohana/Desktop/robot_ws/install/ackermann_robot/lib/python3.12/site-packages:/home/mohana/robot_ws/build/ackermann_robot:/home/mohana/robot_ws/install/ackermann_robot/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.805402] (-) TimerEvent: {}
+[1.905828] (-) TimerEvent: {}
+[2.006288] (-) TimerEvent: {}
+[2.106946] (-) TimerEvent: {}
+[2.207346] (-) TimerEvent: {}
+[2.307867] (-) TimerEvent: {}
+[2.408218] (-) TimerEvent: {}
+[2.428664] (ackermann_robot) StdoutLine: {'line': b'running develop\n'}
+[2.508357] (-) TimerEvent: {}
+[2.608727] (-) TimerEvent: {}
+[2.709131] (-) TimerEvent: {}
+[2.809457] (-) TimerEvent: {}
+[2.909736] (-) TimerEvent: {}
+[2.910195] (ackermann_robot) StdoutLine: {'line': b'running egg_info\n'}
+[2.910564] (ackermann_robot) StdoutLine: {'line': b'creating ackermann_robot.egg-info\n'}
+[2.956933] (ackermann_robot) StdoutLine: {'line': b'writing ackermann_robot.egg-info/PKG-INFO\n'}
+[2.957419] (ackermann_robot) StdoutLine: {'line': b'writing dependency_links to ackermann_robot.egg-info/dependency_links.txt\n'}
+[2.957702] (ackermann_robot) StdoutLine: {'line': b'writing requirements to ackermann_robot.egg-info/requires.txt\n'}
+[2.958054] (ackermann_robot) StdoutLine: {'line': b'writing top-level names to ackermann_robot.egg-info/top_level.txt\n'}
+[2.958278] (ackermann_robot) StdoutLine: {'line': b"writing manifest file 'ackermann_robot.egg-info/SOURCES.txt'\n"}
+[3.009851] (-) TimerEvent: {}
+[3.062509] (ackermann_robot) StdoutLine: {'line': b"reading manifest file 'ackermann_robot.egg-info/SOURCES.txt'\n"}
+[3.063610] (ackermann_robot) StdoutLine: {'line': b"writing manifest file 'ackermann_robot.egg-info/SOURCES.txt'\n"}
+[3.110010] (-) TimerEvent: {}
+[3.112773] (ackermann_robot) StdoutLine: {'line': b'running build_ext\n'}
+[3.113209] (ackermann_robot) StdoutLine: {'line': b'Creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/lib/python3.12/site-packages/ackermann-robot.egg-link (link to .)\n'}
+[3.113734] (ackermann_robot) StdoutLine: {'line': b'\n'}
+[3.114040] (ackermann_robot) StdoutLine: {'line': b'Installed /home/mohana/Desktop/robot_ws/build/ackermann_robot\n'}
+[3.114283] (ackermann_robot) StdoutLine: {'line': b'running symlink_data\n'}
+[3.114599] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index\n'}
+[3.115057] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index\n'}
+[3.115396] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index/packages\n'}
+[3.115654] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/resource/ackermann_robot -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ament_index/resource_index/packages\n'}
+[3.115927] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/package.xml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot\n'}
+[3.116211] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.116469] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/ackermann_robot.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.116734] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/all_sensors.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.117077] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_cameras.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.117347] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_imu.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.117601] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_gpu_lidar.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.117854] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_lidar.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.118151] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_gps.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.118594] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/urdf/sensors_barometer.xacro -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/urdf\n'}
+[3.118862] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.119227] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/chassis_visual.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.119470] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/front_left_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.119736] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/front_right_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.120017] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/rear_left_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.120242] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/rear_right_wheel.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.120453] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage.stl -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.120701] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage.dae -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.120935] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage_diffuse.jpg -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.121177] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/meshes/parking_garage_spec.jpg -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/meshes\n'}
+[3.121388] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/worlds\n'}
+[3.121596] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/worlds/multi_level_parking.sdf -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/worlds\n'}
+[3.121805] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config\n'}
+[3.122062] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/bridges.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config\n'}
+[3.122280] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/ekf.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config\n'}
+[3.122490] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/config/nav2_params.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/config\n'}
+[3.122701] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps\n'}
+[3.122927] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/maps/my_map.yaml -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps\n'}
+[3.123169] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/maps/my_map.pgm -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/maps\n'}
+[3.123408] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz\n'}
+[3.123615] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/rviz/default.rviz -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz\n'}
+[3.123823] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/rviz/nav2_config.rviz -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/rviz\n'}
+[3.124078] (ackermann_robot) StdoutLine: {'line': b'creating /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/launch\n'}
+[3.124294] (ackermann_robot) StdoutLine: {'line': b'symbolically linking /home/mohana/Desktop/robot_ws/build/ackermann_robot/launch/ackermann_gazebo.launch.py -> /home/mohana/Desktop/robot_ws/install/ackermann_robot/share/ackermann_robot/launch\n'}
+[3.190979] (ackermann_robot) CommandEnded: {'returncode': 0}
+[3.210613] (-) TimerEvent: {}
+[3.236151] (ackermann_robot) JobEnded: {'identifier': 'ackermann_robot', 'rc': 0}
+[3.237814] (-) EventReactorShutdown: {}
