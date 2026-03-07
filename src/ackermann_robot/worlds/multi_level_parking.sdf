@@ -78,6 +78,7 @@
               </ode>
             </friction>
           </surface>
+          <laser_retro>100</laser_retro>
         </collision>
 
         <visual name="visual_garage">
@@ -87,10 +88,17 @@
               <scale>0.1 0.1 0.1</scale>
             </mesh>
           </geometry>
+          <!-- <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>1.0 1.0 1.0 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <emissive>0.0 0.0 0.0 1</emissive>
+          </material> -->
         </visual>
       </link>
     </model>
-<model name="ground_reference_station">
+
+    <model name="ground_reference_station">
       <static>true</static>
       <pose>0 0 0.2 0 0 0</pose>
       <link name="link">
@@ -101,7 +109,6 @@
             <diffuse>0 1 0 1</diffuse>
           </material>
         </visual>
-        
         <sensor name="air_pressure_sensor" type="air_pressure">
           <always_on>1</always_on>
           <update_rate>10</update_rate>

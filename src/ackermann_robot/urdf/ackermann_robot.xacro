@@ -1,32 +1,7 @@
 <?xml version="1.0"?>
 <robot name="ackermann_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
   <xacro:include filename="$(find ackermann_robot)/urdf/all_sensors.xacro" />
-  <!-- ===================== -->
-  <!-- Real hardware values  -->
-  <!-- ===================== -->
-
-  <!-- Dual plate chassis -->
-  <xacro:property name="plate_thickness" value="0.002"/>
-  <xacro:property name="standoff_height" value="0.04"/>
-  <xacro:property name="standoff_radius" value="0.004"/>
-
-  <!-- Chassis -->
-  <xacro:property name="chassis_length" value="0.27"/>
-  <xacro:property name="chassis_width"  value="0.1205"/>
-  <xacro:property name="chassis_height" value="${3*plate_thickness + 2*standoff_height}"/>
-  <xacro:property name="chassis_mass"   value="0.13442"/>
-
-  <!-- Wheels -->
-  <xacro:property name="wheel_radius" value="0.036"/>
-  <xacro:property name="wheel_width"  value="0.03"/>
-  <xacro:property name="wheel_mass"   value="0.0677"/>
-
-  <!-- Geometry -->
-  <xacro:property name="wheelbase" value="0.205"/>
-  <xacro:property name="track" value="0.152"/> 
-
-
-
   <!-- Standoff positions -->
   <xacro:property name="standoff_x" value="${chassis_length/2 - 0.02}"/>
   <xacro:property name="standoff_y" value="${chassis_width/2 - 0.02}"/>
@@ -45,7 +20,12 @@
   <!-- ===================== -->
   <!-- Robot center reference -->
   <link name="base_link"/>
-
+  <link name="base_footprint"></link>
+  <joint name="base_footprint_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="base_footprint"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
   <!-- ===================== -->
   <!-- Chassis               -->
   <!-- ===================== -->
@@ -172,7 +152,7 @@
   <joint name="base_to_chassis" type="fixed">
     <parent link="base_link"/>
     <child link="chassis_link"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="${wheelbase/2} 0 0" rpy="0 0 0"/>
   </joint>
 
   <!-- ===================== -->
@@ -315,7 +295,7 @@
   <!-- ===================== -->
   <!-- Gazebo plugins        -->
   <!-- ===================== -->
-  
+
   <!-- Physics properties for chassis -->
   <gazebo reference="chassis_link">
     <mu1>0.8</mu1>
@@ -331,14 +311,14 @@
       <wheel_separation>0.152</wheel_separation>
       <kingpin_width>0.152</kingpin_width>
       <wheel_radius>0.036</wheel_radius>
-      <steering_limit>0.5</steering_limit>
+      <steering_limit>1.0</steering_limit>
       <topic>/cmd_vel</topic>
       <odom_topic>/odom</odom_topic>
       <frame_id>odom</frame_id>
       <child_frame_id>base_link</child_frame_id>
       <odom_publish_frequency>30</odom_publish_frequency>
     </plugin>
-    <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+    <!-- <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
       <publish_link_pose>true</publish_link_pose>
       <publish_sensor_pose>true</publish_sensor_pose>
       <publish_model_pose>true</publish_model_pose>
@@ -349,7 +329,89 @@
       <robot_base_frame>base_link</robot_base_frame>
       <odom_topic>/ground_truth_odom</odom_topic>
       <dimensions>3</dimensions>
+    </plugin> -->
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+      <topic>/joint_states</topic>
     </plugin>
-    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher"/>
   </gazebo>
+  <material name="arduino_blue">
+    <color rgba="0.1 0.5 0.5 1"/>
+  </material>
+  <material name="sbc_green">
+    <color rgba="0.1 0.6 0.1 1"/>
+  </material>
+  <!-- ===================== -->
+  <!-- Extra Visuals         -->
+  <!-- ===================== -->
+  <!-- Front steering servo -->
+  <link name="front_servo_link">
+    <visual>
+      <geometry>
+        <box size="0.03 0.05 0.03"/>
+      </geometry>
+      <material name="wheel_black"/>
+    </visual>
+  </link>
+  <joint name="front_servo_joint" type="fixed">
+    <parent link="chassis_link"/>
+    <child link="front_servo_link"/>
+    <origin rpy="0 0 0" xyz="0.1 0 ${wheel_radius*1.5}"/>
+  </joint>
+  <!-- Rear wheel motors -->
+  <link name="rear_left_motor_link">
+    <visual>
+      <origin rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.02"/>
+      </geometry>
+      <material name="wheel_black"/>
+    </visual>
+  </link>
+  <joint name="rear_left_motor_joint" type="fixed">
+    <parent link="chassis_link"/>
+    <child link="rear_left_motor_link"/>
+    <origin rpy="0 0 0" xyz="-0.1025 0.05 0.036"/>
+  </joint>
+  <link name="rear_right_motor_link">
+    <visual>
+      <origin rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.02"/>
+      </geometry>
+      <material name="wheel_black"/>
+    </visual>
+  </link>
+  <joint name="rear_right_motor_joint" type="fixed">
+    <parent link="chassis_link"/>
+    <child link="rear_right_motor_link"/>
+    <origin rpy="0 0 0" xyz="-0.1025 -0.05 0.036"/>
+  </joint>
+  <!-- Arduino -->
+  <link name="arduino_link">
+    <visual>
+      <geometry>
+        <box size="0.075 0.053 0.01"/>
+      </geometry>
+      <material name="arduino_blue"/>
+    </visual>
+  </link>
+  <joint name="arduino_joint" type="fixed">
+    <parent link="chassis_link"/>
+    <child link="arduino_link"/>
+    <origin rpy="0 0 0" xyz="-${wheelbase/4} 0.0 0.045"/>
+  </joint>
+  <!-- SBC -->
+  <link name="sbc_link">
+    <visual>
+      <geometry>
+        <box size="0.085 0.056 0.015"/>
+      </geometry>
+      <material name="sbc_green"/>
+    </visual>
+  </link>
+  <joint name="sbc_joint" type="fixed">
+    <parent link="chassis_link"/>
+    <child link="sbc_link"/>
+    <origin rpy="0 0 0" xyz="-${wheelbase/4} 0.0 0.085"/>
+  </joint>
 </robot>

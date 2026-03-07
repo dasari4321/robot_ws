@@ -15,20 +15,17 @@ from ros_gz_bridge.actions import RosGzBridge
 
 def generate_launch_description():
     """Launch Gazebo Harmonic with the Ackermann robot for ROS 2 Jazzy."""
-    
     # Get package directory
     ackermann_robot_dir = get_package_share_directory('ackermann_robot')
-    
     # Config files
     ekf_config_path = os.path.join(ackermann_robot_dir, 'config', 'ekf.yaml')
     rviz_config_path = os.path.join(ackermann_robot_dir, 'rviz', 'default.rviz')
 
     # SDF world file (Gazebo Harmonic uses SDF format)
     world_file = os.path.join(ackermann_robot_dir, 'worlds', 'multi_level_parking.sdf')
-    
     # XACRO file
     xacro_file = os.path.join(ackermann_robot_dir, 'urdf', 'ackermann_robot.xacro')
-    
+
     # Process XACRO to URDF
     urdf_content = xacro.process_file(xacro_file).toxml()
 
@@ -59,9 +56,9 @@ def generate_launch_description():
 
         # Start Gazebo Sim (gz_sim) as a Node
         ExecuteProcess(
-        cmd=['gz', 'sim', world_file, '-v', '4', '-r'],
-        output='screen',
-        shell=True  # Allows the system to interpret 'gz' as a command
+            cmd=['gz', 'sim', world_file, '-v', '4', '-r'],
+            output='screen',
+            shell=True  # Allows the system to interpret 'gz' as a command
         ),
 
         # Spawn the robot using ros_gz
@@ -71,19 +68,19 @@ def generate_launch_description():
             arguments=[
                 '-name', 'ackermann_robot',
                 '-topic', 'robot_description',
-                '-x', '1.2', '-y', '0.0', '-z', '0.025', '-euler', '0.0 0.0 0.0',
+                '-x', '1.0', '-y', '0.0', '-z', '0.028', '-euler', '0.0 0.0 1.5708',
                 '-use_sim_time', 'true'
             ],
             output='screen',
         ),
 
-        # Start the ROS-Gazebo bridge 
+        # Start the ROS-Gazebo bridge
         Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        name='ros_gz_bridge',
-        output='screen',
-        parameters=[bridge_params]
+            package='ros_gz_bridge',
+            executable='parameter_bridge',
+            name='ros_gz_bridge',
+            output='screen',
+            parameters=[bridge_params]
         ),
 
         # Robot Localization (EKF)
@@ -105,13 +102,13 @@ def generate_launch_description():
         # ),
 
         # Visual Odometry (ORB-based)
-        Node(
-            package='ackermann_robot',
-            executable='visual_odom',
-            name='visual_odom',
-            output='screen',
-            parameters=[{'use_sim_time': True}]
-        ),
+        # Node(
+        #     package='ackermann_robot',
+        #     executable='visual_odom',
+        #     name='visual_odom',
+        #     output='screen',
+        #     parameters=[{'use_sim_time': True}]
+        # ),
 
         # RViz
         Node(
@@ -123,3 +120,16 @@ def generate_launch_description():
             condition=IfCondition(LaunchConfiguration('rviz'))
         )
     ])
+
+
+
+
+
+
+#ros2 launch slam_toolbox online_async_launch.py slam_params_file:=install/ackermann_robot/share/ackermann_robot/config/mapper_params_online_async.yaml use_sim_time:=True
+
+#ros2 run nav2_map_server map_saver_cli -f parking_F1
+
+#ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True transform_tolerance:=5.0 
+
+#ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True transform_tolerance:=5.0 params_file:=install/ackermann_robot/share/ackermann_robot/config/nav2_params.yaml 

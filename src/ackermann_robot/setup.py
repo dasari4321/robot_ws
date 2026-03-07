@@ -8,15 +8,18 @@ setup(
     packages=[package_name],
     data_files=[
     ('share/ament_index/resource_index/packages',
-     ['resource/' + package_name]),
+     [
+         'resource/' + package_name]),
 
     ('share/' + package_name, ['package.xml']),
 
     ('share/' + package_name + '/urdf',
-     ['urdf/ackermann_robot.xacro',
-      'urdf/all_sensors.xacro',
-      'urdf/sensors_cameras.xacro',
-      'urdf/sensors_imu.xacro',
+     [
+         'urdf/ackermann_robot.xacro',
+         'urdf/all_sensors.xacro',
+         'urdf/sensors_cameras.xacro',
+         'urdf/sensors_imu.xacro',
+         'urdf/sensors_lidar.xacro'
       ]),
 
     ('share/' + package_name + '/meshes',[
@@ -32,23 +35,38 @@ setup(
     ]),
 
     ('share/' + package_name + '/worlds',
-     ['worlds/multi_level_parking.sdf']),
+     [
+         'worlds/multi_level_parking.sdf']),
 
     ('share/' + package_name + '/config',
-     ['config/bridges.yaml',
-     'config/ekf.yaml',
-     'config/nav2_params.yaml']),
+     [
+         'config/amcl.yaml',
+         'config/bridges.yaml',
+         'config/ekf.yaml',
+         'config/mapper_params_online_async.yaml',
+         'config/nav2_params.yaml']),
 
     ('share/' + package_name + '/maps',
-     ['maps/my_map.yaml', 'maps/my_map.pgm']),
+     [
+         'maps/parking_F1.pgm',
+         'maps/parking_F1.yaml']),
 
     ('share/' + package_name + '/rviz',
-     ['rviz/default.rviz',
-      'rviz/nav2_config.rviz']),
+     [
+         'rviz/default.rviz',
+         'rviz/nav2_config.rviz']),
 
     ('share/' + package_name + '/launch',
-     ['launch/ackermann_gazebo.launch.py']),
+     [
+         'launch/ackermann_gazebo.launch.py',
+         'launch/navigation.launch.py',]),
+    ('share/' + package_name + '/behavior_trees',
+        [
+            'behavior_trees/navigate_to_pose_w_backup_recovery.xml',
+            'behavior_trees/navigate_through_poses_w_backup_recovery.xml'
+        ]),
     ],
+
 
     install_requires=['setuptools'],
     zip_safe=True,
@@ -64,7 +82,7 @@ setup(
     entry_points={
         'console_scripts': [
 #            'baro_converter = ackermann_robot.baro_converter:main',
-            'visual_odom = ackermann_robot.visual_odom:main',
+#            'visual_odom = ackermann_robot.visual_odom:main',
 #            'camera_transform_extractor = ackermann_robot.calibr:main',
         ],
     },

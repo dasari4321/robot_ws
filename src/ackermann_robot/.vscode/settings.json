@@ -1,0 +1,24 @@
+{
+    "urdf-visualizer.packages": {
+        "ros2": {
+            "ros2_control": {
+                "package": "ros2_control",
+                "path": "/opt/ros/jazzy/share/ros2_control"
+            },
+            "ros2_controllers": {
+                "package": "ros2_controllers",
+                "path": "/opt/ros/jazzy/share/ros2_controllers"
+            },
+            "ackermann_robot": {
+                "package": "ackermann_robot",
+                "path": "/home/mohana/robot_ws/install/ackermann_robot/share/ackermann_robot"
+            },
+            "qrb_ros_sim_description": {
+                "package": "qrb_ros_sim_description",
+                "path": "/home/mohana/robot_ws/install/qrb_ros_sim_description/share/qrb_ros_sim_description"
+            }
+
+        }
+
+    }
+}
