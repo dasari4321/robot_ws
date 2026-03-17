@@ -1,0 +1,26 @@
+image_width: 640
+image_height: 480
+camera_name: hp_truevision_hd_camera:_hp_tru
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [663.07202,   0.     , 260.47439,
+           0.     , 661.2392 , 217.702  ,
+           0.     ,   0.     ,   1.     ]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.144933, 0.221739, -0.017629, -0.010751, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1., 0., 0.,
+         0., 1., 0.,
+         0., 0., 1.]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [651.4696 ,   0.     , 254.80929,   0.     ,
+           0.     , 648.62506, 211.17328,   0.     ,
+           0.     ,   0.     ,   1.     ,   0.     ]

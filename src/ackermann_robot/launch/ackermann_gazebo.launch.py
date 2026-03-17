@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
+"""Launch Gazebo Harmonic with the Ackermann robot."""
 
 import os
-import sys
+
 import xacro
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess, IncludeLaunchDescription, DeclareLaunchArgument
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument, ExecuteProcess
 from launch.conditions import IfCondition
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.parameter_descriptions import ParameterValue
-from ros_gz_bridge.actions import RosGzBridge
+
 
 def generate_launch_description():
     """Launch Gazebo Harmonic with the Ackermann robot for ROS 2 Jazzy."""
@@ -22,9 +21,11 @@ def generate_launch_description():
     rviz_config_path = os.path.join(ackermann_robot_dir, 'rviz', 'default.rviz')
 
     # SDF world file (Gazebo Harmonic uses SDF format)
-    world_file = os.path.join(ackermann_robot_dir, 'worlds', 'multi_level_parking.sdf')
+    world_file = os.path.join(
+        ackermann_robot_dir, 'worlds', 'multi_level_parking.sdf')
     # XACRO file
-    xacro_file = os.path.join(ackermann_robot_dir, 'urdf', 'ackermann_robot.xacro')
+    xacro_file = os.path.join(
+        ackermann_robot_dir, 'urdf', 'ackermann_robot.xacro')
 
     # Process XACRO to URDF
     urdf_content = xacro.process_file(xacro_file).toxml()
@@ -33,7 +34,8 @@ def generate_launch_description():
     bridge_params = {
         'use_sim_time': True,
         'bridge_name': 'ackermann_bridge_config',
-        'config_file': os.path.join(ackermann_robot_dir, 'config', 'bridges.yaml'),
+        'config_file': os.path.join(
+            ackermann_robot_dir, 'config', 'bridges.yaml'),
     }
 
     return LaunchDescription([
@@ -49,7 +51,8 @@ def generate_launch_description():
             executable='robot_state_publisher',
             output='screen',
             parameters=[{
-                'robot_description': urdf_content,   #ParameterValue(urdf_content, value_type=str),
+                # ParameterValue(urdf_content, value_type=str),
+                'robot_description': urdf_content,
                 'use_sim_time': True,
             }],
         ),
@@ -68,7 +71,8 @@ def generate_launch_description():
             arguments=[
                 '-name', 'ackermann_robot',
                 '-topic', 'robot_description',
-                '-x', '1.0', '-y', '0.0', '-z', '0.028', '-euler', '0.0 0.0 1.5708',
+                '-x', '1.0', '-y', '0.0', '-z', '0.028',
+                '-euler', '0.0 0.0 1.5708',
                 '-use_sim_time', 'true'
             ],
             output='screen',
@@ -110,6 +114,15 @@ def generate_launch_description():
         #     parameters=[{'use_sim_time': True}]
         # ),
 
+        # BEV Node
+        Node(
+            package='ackermann_robot',
+            executable='bev_node',
+            name='bev_node',
+            output='screen',
+            parameters=[{'use_sim_time': True}]
+        ),
+
         # RViz
         Node(
             package='rviz2',
@@ -120,16 +133,3 @@ def generate_launch_description():
             condition=IfCondition(LaunchConfiguration('rviz'))
         )
     ])
-
-
-
-
-
-
-#ros2 launch slam_toolbox online_async_launch.py slam_params_file:=install/ackermann_robot/share/ackermann_robot/config/mapper_params_online_async.yaml use_sim_time:=True
-
-#ros2 run nav2_map_server map_saver_cli -f parking_F1
-
-#ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True transform_tolerance:=5.0 
-
-#ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True transform_tolerance:=5.0 params_file:=install/ackermann_robot/share/ackermann_robot/config/nav2_params.yaml 

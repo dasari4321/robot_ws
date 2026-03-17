@@ -24,6 +24,7 @@
       <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
     </joint>
 
+
     <gazebo reference="${name}_joint">
       <preserveFixedJoint>true</preserveFixedJoint>
     </gazebo>

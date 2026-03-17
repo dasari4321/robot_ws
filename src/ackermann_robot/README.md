@@ -1,58 +1,106 @@
-# Ackermann Robot
+# Ackermann Robot Package
 
-This package contains the simulation, hardware description, and navigation configuration for an Ackermann steering robot using ROS 2 Jazzy and Gazebo Harmonic.
+This package provides a complete simulation and navigation setup for an Ackermann steering robot using **ROS 2 Jazzy** and **Gazebo Harmonic**. It features a custom visual odometry implementation, barometer-based altitude estimation, and a tuned Navigation 2 stack using the MPPI controller.
 
-## Prerequisites
+## 🌟 Features
 
-Ensure you have the following installed:
+*   **Ackermann Kinematics**: Accurate simulation using Gazebo Harmonic's Ackermann steering system.
+*   **Navigation 2 Integration**: Configured with the **MPPI Controller**, specifically tuned for non-holonomic robots to handle steering constraints effectively.
+*   **SLAM**: Mapping capabilities using `slam_toolbox`.
+*   **Visual Odometry**: Custom ORB-feature-based visual odometry node (`visual_odom.py`) for GPS-denied environments.
+*   **Sensor Fusion**: EKF setup fusing IMU, Wheel Odometry, and Visual Odometry.
+*   **Barometer Support**: Custom node (`baro_converter.py`) to convert fluid pressure to altitude for 3D localization context.
+
+## 📋 Prerequisites
+
+Ensure you have the following installed on Ubuntu 24.04:
+
 *   **ROS 2 Jazzy**
-*   **Gazebo Harmonic** (`ros-jazzy-ros-gz`)
-*   **Navigation 2** (`ros-jazzy-nav2-bringup`)
-*   **Robot Localization** (`ros-jazzy-robot-localization`)
-*   **Xacro** (`ros-jazzy-xacro`)
-
-## Installation
-
-1.  Clone the repository into your workspace `src` directory:
+*   **Gazebo Harmonic**
+*   **Dependencies**:
     ```bash
-    cd ~/robot_ws/src
-    # Clone your repository here
+    sudo apt install ros-jazzy-nav2-bringup ros-jazzy-navigation2 \
+                     ros-jazzy-slam-toolbox ros-jazzy-robot-localization \
+                     ros-jazzy-xacro ros-jazzy-ros-gz \
+                     python3-opencv python3-scipy
     ```
 
-2.  Install dependencies:
+## 🛠️ Installation
+
+1.  **Clone the repository**:
+    ```bash
+    cd ~/robot_ws/src
+    # Clone this package here
+    ```
+
+2.  **Install dependencies**:
     ```bash
     cd ~/robot_ws
     rosdep install --from-paths src --ignore-src -r -y
     ```
 
-3.  Build the package:
+3.  **Build the package**:
     ```bash
     colcon build --symlink-install --packages-select ackermann_robot
     source install/setup.bash
     ```
 
-## Usage
+## 🚀 Usage
 
-### 1. Simulation Only
-To launch the robot in Gazebo along with RViz to visualize the robot state and sensors (Lidar, Camera, IMU, etc.):
+### 1. Simulation & Visualization
+Launch the robot in Gazebo along with RViz. This starts the hardware interface, sensor bridges, and the EKF.
 
 ```bash
 ros2 launch ackermann_robot ackermann_gazebo.launch.py
 ```
+*   **Note**: To enable the custom `visual_odom` or `baro_converter` nodes, uncomment them in `launch/ackermann_gazebo.launch.py`.
 
-### 2. Navigation (Nav2)
-To launch the simulation combined with the Navigation 2 stack. This starts Gazebo, the EKF (Extended Kalman Filter), and the Nav2 lifecycle nodes (AMCL, Planner, Controller).
+### 2. Mapping (SLAM)
+To create a map of the environment:
+
+1.  Launch the simulation (as above).
+2.  Run SLAM Toolbox:
+    ```bash
+    ros2 launch slam_toolbox online_async_launch.py \
+      slam_params_file:=$(ros2 pkg prefix ackermann_robot)/share/ackermann_robot/config/mapper_params_online_async.yaml \
+      use_sim_time:=True
+    ```
+3.  Drive the robot using the teleop panel in RViz or:
+    ```bash
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    ```
+4.  **Save the map**:
+    ```bash
+    ros2 run nav2_map_server map_saver_cli -f ~/my_map
+    ```
+
+### 3. Autonomous Navigation
+Launch the full Navigation 2 stack with the MPPI controller.
 
 ```bash
-ros2 launch ackermann_robot navigation.launch.py
+ros2 launch ackermann_robot navigation.launch.py map_name:=/path/to/your/map.yaml
 ```
 
-Once launched, you can use the **2D Goal Pose** tool in RViz to send the robot to a destination.
+*   **Default Map**: If no map is specified, it defaults to `maps/parking_F1.yaml`.
+*   **Operation**: Use the **2D Goal Pose** tool in RViz to send the robot to a destination. The robot handles the Ackermann constraints (cannot turn in place) automatically.
 
-## Configuration Files
+## 📂 Package Structure
 
-*   **URDF/Xacro**: Located in `urdf/`. The main entry point is `ackermann_robot.xacro`.
-*   **Gazebo Bridge**: Mappings between ROS 2 topics and Gazebo topics are defined in `config/bridges.yaml`.
-*   **Navigation**: Nav2 parameters (Costmaps, MPPI/Smac planners) are in `config/nav2_params.yaml`.
-*   **Localization**: EKF parameters are in `config/ekf.yaml`.
-*   **Maps**: The default map is located at `maps/my_map.yaml`.
+### Custom Nodes
+*   **`visual_odom.py`**: Monocular Visual Odometry using ORB features and Essential Matrix estimation. It subscribes to camera images and scales translation based on wheel odometry velocity.
+*   **`baro_converter.py`**: Converts Gazebo air pressure topics to `PoseWithCovarianceStamped` (Z-axis) for 3D localization.
+*   **`calibr.py`**: Utility to extract camera extrinsic matrices from the TF tree.
+
+### Configuration (`config/`)
+*   **`nav2_params.yaml`**: Configuration for AMCL, Costmaps, SmacPlanner, and MPPI Controller.
+*   **`ekf.yaml`**: Robot Localization settings for fusing sensors.
+*   **`bridges.yaml`**: ROS-Gazebo message bridge configuration.
+
+### Launch Files (`launch/`)
+*   **`ackermann_gazebo.launch.py`**: Main entry point for simulation.
+*   **`navigation.launch.py`**: Brings up the Nav2 stack with the specified map.
+
+## 📝 Notes on Ackermann Tuning
+The `nav2_params.yaml` is specifically tuned for this robot:
+*   **Min Turning Radius**: Set to `0.18m` in both the Planner and Controller.
+*   **MPPI Controller**: Used instead of DWB to handle the kinematic constraints of car-like steering.

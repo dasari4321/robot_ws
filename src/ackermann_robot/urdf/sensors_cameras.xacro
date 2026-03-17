@@ -48,20 +48,23 @@
           </distortion>
           <!-- Lens configuration for wide angle/fisheye simulation -->
           <lens>
+            <type>equidistant</type>
             <!-- type element is mandatory -->
-            <type>custom</type>
+            <!-- <type>custom</type> -->
             <!-- manually defined mapping function r = c1*f*fun(theta/c2 + c3) -->
             <!-- More information here: https://en.wikipedia.org/wiki/Fisheye_lens#Mapping_function -->
-            <custom_function>
-              <c1>1.05</c1>
+
+            <!-- <custom_function>
+              <c1>1.05</c1> -->
               <!-- linear scaling -->
-              <c2>4</c2>
+              <!-- <c2>4</c2> -->
               <!-- angle scaling -->
-              <f>1.0</f>
+              <!-- <f>1.0</f> -->
               <!-- one more scaling parameter -->
-              <fun>tan</fun>
+              <!-- <fun>tan</fun> -->
               <!-- one of sin,tan,id -->
-            </custom_function>
+            <!-- </custom_function> -->
+
             <!-- if it is set to `true` your horizontal FOV will ramain as defined -->
             <!-- othervise it depends on lens type and custom function, if there is one -->
             <scale_to_hfov>true</scale_to_hfov>
@@ -88,6 +91,71 @@
         <update_rate>30</update_rate>
         <visualize>true</visualize>
         <topic>${name}_camera/image</topic>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="rgbd_camera" params="name x y z roll pitch yaw width height fov k1 k2 k3 p1 p2">
+    <link name="${name}_camera_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.02 0.02 0.02"/>
+        </geometry>
+        <material name="wheel_black"/>
+      </visual>
+    </link>
+
+    <joint name="${name}_camera_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="${name}_camera_link"/>
+      <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+    </joint>
+
+    <link name="${name}_camera_optical_link"/>
+    <joint name="${name}_joint" type="fixed">
+      <parent link="${name}_camera_link"/>
+      <child link="${name}_camera_optical_link"/>
+      <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+    </joint>
+
+    <gazebo reference="${name}_camera_link">
+      <sensor name="${name}_camera" type="rgbd_camera">
+        <camera>
+          <horizontal_fov>${fov}</horizontal_fov>
+          <image>
+            <width>${width}</width>
+            <height>${height}</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>10</far>
+          </clip>
+          <distortion>
+            <k1>${k1}</k1>
+            <k2>${k2}</k2>
+            <k3>${k3}</k3>
+            <p1>${p1}</p1>
+            <p2>${p2}</p2>
+            <center>0.5 0.5</center>
+          </distortion>
+        </camera>
+        <depth_camera>
+          <clip>
+            <near>0.1</near>
+            <far>10</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </depth_camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>${name}_camera</topic>
+        <gz_frame_id>${name}_camera_optical_link</gz_frame_id>
       </sensor>
     </gazebo>
   </xacro:macro>

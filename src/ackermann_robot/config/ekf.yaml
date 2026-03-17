@@ -1,40 +1,72 @@
-### ekf_node config for ackermann_robot ###
+# ### ekf_node config for ackermann_robot ###
+# ekf_filter_node:
+#   ros__parameters:
+#     frequency: 30.0
+#     two_d_mode: false
+#     publish_acceleration: true
+#     publish_tf: true
+#     use_sim_time: true
+#     dynamic_process_noise_covariance: true
+
+#     map_frame: map
+#     odom_frame: odom
+#     base_link_frame: base_link
+#     world_frame: odom
+
+#     odom0: /odom
+#     odom0_config: [false, false, false,
+#                    false, false, false,
+#                    true,  false,  false,
+#                    false, false, true,
+#                    false, false, false]
+#     odom0_differential: false
+
+#     imu0: /imu
+#     imu0_config: [false, false, false,
+#                   false,  false,  true,
+#                   false, false, false,
+#                   false,  false,  true,
+#                   true,  false,  false]
+#     imu0_differential: true
+
+#     use_control: false
+
+#     odom1: /visual_odom
+#     odom1_config: [true,  true,  false,
+#                    false, false, true,
+#                    false, false, false,
+#                    false, false, false,
+#                    false, false, false]
+#     odom1_differential: false
+
 ekf_filter_node:
   ros__parameters:
-    frequency: 30.0
-    two_d_mode: true
-    publish_acceleration: true
-    publish_tf: true
-    use_sim_time: true
-    dynamic_process_noise_covariance: true
+    # ... your existing frames ...
+    two_d_mode: false  # Correct: must be false for ramps
 
-    map_frame: map
-    odom_frame: odom
-    base_link_frame: base_link
-    world_frame: odom
-
+    # Wheel Odometry (from Gazebo)
     odom0: /odom
-    odom0_config: [false, false, false,
-                   false, false, false,
-                   true,  false,  false,
-                   false, false, true,
+    odom0_config: [false, false, false, # Position
+                   false, false, false, # Orientation
+                   true,  true,  false, # X/Y Velocity (Added Y for slip)
+                   false, false, true,  # Roll/Pitch/Yaw Velocity
                    false, false, false]
     odom0_differential: false
 
+    # IMU: Crucial for detecting the "Tilt" on the ramp
     imu0: /imu
     imu0_config: [false, false, false,
-                  false,  false,  true,
+                  true,  true,  true,   # Enable Roll and Pitch (crucial for ramps!)
                   false, false, false,
-                  false,  false,  true,
-                  true,  false,  false]
-    imu0_differential: true
+                  true,  true,  true,   # Angular velocities
+                  true,  false,  false] # Linear acceleration (X only)
+    imu0_differential: false # Set to false to use absolute orientation from IMU
 
-    use_control: false
-
-    # odom1: /visual_odom
-    # odom1_config: [true,  true,  false,
-    #                false, false, true,
-    #                false, false, false,
-    #                false, false, false,
-    #                false, false, false]
-    # odom1_differential: false
+    # Visual Odometry (from rtabmap_odom)
+    odom1: /vo
+    odom1_config: [true,  true,  true,   # Enable Z position (Height!)
+                   true,  true,  true,   # Enable Roll/Pitch/Yaw
+                   false, false, false,
+                   false, false, false,
+                   false, false, false]
+    odom1_differential: false
