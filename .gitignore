@@ -1,0 +1,8 @@
+.venv/
+log/
+build/ 
+install/
+src/MG400_ROS2
+src/qrb_ros*
+src/PlayStation*
+
